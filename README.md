@@ -15,6 +15,14 @@ allow you to read and write various spreadsheet file formats such as Excel and L
 
 See the [install instructions](https://phpspreadsheet.readthedocs.io/en/latest/#installation).
 
+### Using without Composer
+
+If you prefer not to use Composer, include the bundled autoloader:
+
+```php
+require 'autoload.php';
+```
+
 ## Documentation
 
 Read more about it, including install instructions, in the [official documentation](https://phpspreadsheet.readthedocs.io). Or check out the [API documentation](https://phpoffice.github.io/PhpSpreadsheet).
