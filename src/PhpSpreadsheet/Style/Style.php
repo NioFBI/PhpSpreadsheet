@@ -9,6 +9,7 @@ use PhpOffice\PhpSpreadsheet\Exception;
 use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use PhpOffice\PhpSpreadsheet\Shared\ObjectIdHelper;
 
 class Style extends Supervisor
 {
@@ -398,7 +399,7 @@ class Style extends Supervisor
                 } else {
                     // Style cache is stored by Style::getHashCode(). But calling this method is
                     // expensive. So we cache the php obj id -> hash.
-                    $objId = spl_object_id($style);
+                    $objId = ObjectIdHelper::id($style);
 
                     // Look for the original HashCode
                     $styleHash = self::$cachedStyles['hashByObjId'][$objId] ?? null;

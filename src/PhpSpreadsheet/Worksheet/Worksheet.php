@@ -25,6 +25,7 @@ use PhpOffice\PhpSpreadsheet\ReferenceHelper;
 use PhpOffice\PhpSpreadsheet\RichText\RichText;
 use PhpOffice\PhpSpreadsheet\Shared;
 use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
+use PhpOffice\PhpSpreadsheet\Shared\ObjectIdHelper;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Style\Alignment;
 use PhpOffice\PhpSpreadsheet\Style\Color;
@@ -355,7 +356,7 @@ class Worksheet
     {
         // Set parent and title
         $this->parent = $parent;
-        $this->hash = spl_object_id($this);
+        $this->hash = ObjectIdHelper::id($this);
         $this->setTitle($title, false);
         // setTitle can change $pTitle
         $this->setCodeName($this->getTitle());
@@ -414,7 +415,7 @@ class Worksheet
 
     public function __wakeup(): void
     {
-        $this->hash = spl_object_id($this);
+        $this->hash = ObjectIdHelper::id($this);
     }
 
     /**
@@ -3759,7 +3760,7 @@ class Worksheet
                 }
             }
         }
-        $this->hash = spl_object_id($this);
+        $this->hash = ObjectIdHelper::id($this);
     }
 
     /**
