@@ -16,13 +16,15 @@ class Drawing extends BaseDrawing
 
     /**
      * Path.
+      * @var string
      */
-    private string $path;
+    private $path;
 
     /**
      * Whether or not we are dealing with a URL.
+      * @var bool
      */
-    private bool $isUrl;
+    private $isUrl;
 
     /**
      * Create a new Drawing.

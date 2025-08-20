@@ -6,13 +6,17 @@ use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 
 class ProtectedRange
 {
-    private string $name = '';
+    /** @var string */
+    private $name = '';
 
-    private string $password = '';
+    /** @var string */
+    private $password = '';
 
-    private string $sqref;
+    /** @var string */
+    private $sqref;
 
-    private string $securityDescriptor = '';
+    /** @var string */
+    private $securityDescriptor = '';
 
     /**
      * No setters aside from constructor.

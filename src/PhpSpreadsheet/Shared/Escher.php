@@ -6,13 +6,15 @@ class Escher
 {
     /**
      * Drawing Group Container.
+      * @var ?Escher\DggContainer
      */
-    private ?Escher\DggContainer $dggContainer = null;
+    private $dggContainer = null;
 
     /**
      * Drawing Container.
+      * @var ?Escher\DgContainer
      */
-    private ?Escher\DgContainer $dgContainer = null;
+    private $dgContainer = null;
 
     /**
      * Get Drawing Group Container.

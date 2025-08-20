@@ -18,21 +18,25 @@ class Title
      *
      * @var array<RichText|string>|RichText|string
      */
-    private array|RichText|string $caption;
+    private $caption;
 
     /**
      * Allow overlay of other elements?
+      * @var bool
      */
-    private bool $overlay = true;
+    private $overlay = true;
 
     /**
      * Title Layout.
+      * @var ?Layout
      */
-    private ?Layout $layout;
+    private $layout;
 
-    private string $cellReference = '';
+    /** @var string */
+    private $cellReference = '';
 
-    private ?Font $font = null;
+    /** @var ?Font */
+    private $font = null;
 
     /**
      * Create a new Title.

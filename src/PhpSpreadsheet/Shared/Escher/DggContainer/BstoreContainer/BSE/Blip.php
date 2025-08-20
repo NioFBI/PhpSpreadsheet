@@ -8,13 +8,15 @@ class Blip
 {
     /**
      * The parent BSE.
+      * @var BSE
      */
-    private BSE $parent;
+    private $parent;
 
     /**
      * Raw image data.
+      * @var string
      */
-    private string $data;
+    private $data;
 
     /**
      * Get the raw image data.

@@ -71,38 +71,45 @@ class TableStyle
 
     /**
      * Theme.
+      * @var string
      */
-    private string $theme;
+    private $theme;
 
     /**
      * Show First Column.
+      * @var bool
      */
-    private bool $showFirstColumn = false;
+    private $showFirstColumn = false;
 
     /**
      * Show Last Column.
+      * @var bool
      */
-    private bool $showLastColumn = false;
+    private $showLastColumn = false;
 
     /**
      * Show Row Stripes.
+      * @var bool
      */
-    private bool $showRowStripes = false;
+    private $showRowStripes = false;
 
     /**
      * Show Column Stripes.
+      * @var bool
      */
-    private bool $showColumnStripes = false;
+    private $showColumnStripes = false;
 
     /**
      * TableDxfsStyle.
+      * @var ?TableDxfsStyle
      */
-    private ?TableDxfsStyle $tableStyle = null;
+    private $tableStyle = null;
 
     /**
      * Table.
+      * @var ?Table
      */
-    private ?Table $table = null;
+    private $table = null;
 
     /**
      * Create a new Table Style.

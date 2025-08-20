@@ -61,45 +61,47 @@ class OLE
      *
      * @var array<OLE\PPS|OLE\PPS\File|Root>
      */
-    public array $_list = [];
+    public $_list = [];
 
     /**
      * Root directory of OLE container.
+      * @var Root
      */
-    public Root $root;
+    public $root;
 
     /**
      * Big Block Allocation Table.
      *
      * @var mixed[] (blockId => nextBlockId)
      */
-    public array $bbat;
+    public $bbat;
 
     /**
      * Short Block Allocation Table.
      *
      * @var mixed[] (blockId => nextBlockId)
      */
-    public array $sbat;
+    public $sbat;
 
     /**
      * Size of big blocks. This is usually 512.
      *
      * @var int<1, max> number of octets per block
      */
-    public int $bigBlockSize;
+    public $bigBlockSize;
 
     /**
      * Size of small blocks. This is usually 64.
      *
      * @var int number of octets per block
      */
-    public int $smallBlockSize;
+    public $smallBlockSize;
 
     /**
      * Threshold for big blocks.
+      * @var int
      */
-    public int $bigBlockThreshold;
+    public $bigBlockThreshold;
 
     /**
      * Reads an OLE container from the contents of the file given.

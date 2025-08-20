@@ -5,34 +5,46 @@ namespace PhpOffice\PhpSpreadsheet\Style\ConditionalFormatting;
 class ConditionalDataBarExtension
 {
     /** <dataBar> attributes */
-    private int $minLength;
+    /** @var int */
+    private $minLength;
 
-    private int $maxLength;
+    /** @var int */
+    private $maxLength;
 
-    private ?bool $border = null;
+    /** @var ?bool */
+    private $border = null;
 
-    private ?bool $gradient = null;
+    /** @var ?bool */
+    private $gradient = null;
 
-    private ?string $direction = null;
+    /** @var ?string */
+    private $direction = null;
 
-    private ?bool $negativeBarBorderColorSameAsPositive = null;
+    /** @var ?bool */
+    private $negativeBarBorderColorSameAsPositive = null;
 
-    private ?string $axisPosition = null;
+    /** @var ?string */
+    private $axisPosition = null;
 
     // <dataBar> children
 
-    private ConditionalFormatValueObject $maximumConditionalFormatValueObject;
+    /** @var ConditionalFormatValueObject */
+    private $maximumConditionalFormatValueObject;
 
-    private ConditionalFormatValueObject $minimumConditionalFormatValueObject;
+    /** @var ConditionalFormatValueObject */
+    private $minimumConditionalFormatValueObject;
 
-    private ?string $borderColor = null;
+    /** @var ?string */
+    private $borderColor = null;
 
-    private ?string $negativeFillColor = null;
+    /** @var ?string */
+    private $negativeFillColor = null;
 
-    private ?string $negativeBorderColor = null;
+    /** @var ?string */
+    private $negativeBorderColor = null;
 
     /** @var array{rgb: ?string, theme: ?string, tint: ?string} */
-    private array $axisColor = [
+    private $axisColor = [
         'rgb' => null,
         'theme' => null,
         'tint' => null,

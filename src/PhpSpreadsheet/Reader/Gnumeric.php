@@ -41,17 +41,19 @@ class Gnumeric extends BaseReader
      *
      * @var array<array{column: int, row: int, formula:string}>
      */
-    private array $expressions = [];
+    private $expressions = [];
 
     /**
      * Spreadsheet shared across all functions.
+      * @var Spreadsheet
      */
-    private Spreadsheet $spreadsheet;
+    private $spreadsheet;
 
-    private ReferenceHelper $referenceHelper;
+    /** @var ReferenceHelper */
+    private $referenceHelper;
 
     /** @var array{'dataType': string[]} */
-    public static array $mappings = [
+    public static $mappings = [
         'dataType' => [
             '10' => DataType::TYPE_NULL,
             '20' => DataType::TYPE_BOOL,

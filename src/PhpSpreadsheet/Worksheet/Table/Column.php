@@ -12,38 +12,45 @@ class Column
 {
     /**
      * Table Column Index.
+      * @var string
      */
-    private string $columnIndex;
+    private $columnIndex;
 
     /**
      * Show Filter Button.
+      * @var bool
      */
-    private bool $showFilterButton = true;
+    private $showFilterButton = true;
 
     /**
      * Total Row Label.
+      * @var ?string
      */
-    private ?string $totalsRowLabel = null;
+    private $totalsRowLabel = null;
 
     /**
      * Total Row Function.
+      * @var ?string
      */
-    private ?string $totalsRowFunction = null;
+    private $totalsRowFunction = null;
 
     /**
      * Total Row Formula.
+      * @var ?string
      */
-    private ?string $totalsRowFormula = null;
+    private $totalsRowFormula = null;
 
     /**
      * Column Formula.
+      * @var ?string
      */
-    private ?string $columnFormula = null;
+    private $columnFormula = null;
 
     /**
      * Table.
+      * @var ?Table
      */
-    private ?Table $table;
+    private $table;
 
     /**
      * Create a new Column.

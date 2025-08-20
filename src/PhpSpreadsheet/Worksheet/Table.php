@@ -16,50 +16,58 @@ class Table implements Stringable
 {
     /**
      * Table Name.
+      * @var string
      */
-    private string $name;
+    private $name;
 
     /**
      * Show Header Row.
+      * @var bool
      */
-    private bool $showHeaderRow = true;
+    private $showHeaderRow = true;
 
     /**
      * Show Totals Row.
+      * @var bool
      */
-    private bool $showTotalsRow = false;
+    private $showTotalsRow = false;
 
     /**
      * Table Range.
+      * @var string
      */
-    private string $range = '';
+    private $range = '';
 
     /**
      * Table Worksheet.
+      * @var ?Worksheet
      */
-    private ?Worksheet $workSheet = null;
+    private $workSheet = null;
 
     /**
      * Table allow filter.
+      * @var bool
      */
-    private bool $allowFilter = true;
+    private $allowFilter = true;
 
     /**
      * Table Column.
      *
      * @var Table\Column[]
      */
-    private array $columns = [];
+    private $columns = [];
 
     /**
      * Table Style.
+      * @var TableStyle
      */
-    private TableStyle $style;
+    private $style;
 
     /**
      * Table AutoFilter.
+      * @var AutoFilter
      */
-    private AutoFilter $autoFilter;
+    private $autoFilter;
 
     /**
      * Create a new Table.

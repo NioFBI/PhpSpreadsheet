@@ -4,12 +4,14 @@ namespace PhpOffice\PhpSpreadsheet\Worksheet;
 
 class Column
 {
-    private Worksheet $worksheet;
+    /** @var Worksheet */
+    private $worksheet;
 
     /**
      * Column index.
+      * @var string
      */
-    private string $columnIndex;
+    private $columnIndex;
 
     /**
      * Create a new column.

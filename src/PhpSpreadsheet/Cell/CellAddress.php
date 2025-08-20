@@ -8,15 +8,20 @@ use Stringable;
 
 class CellAddress implements Stringable
 {
-    protected ?Worksheet $worksheet;
+    /** @var ?Worksheet */
+    protected $worksheet;
 
-    protected string $cellAddress;
+    /** @var string */
+    protected $cellAddress;
 
-    protected string $columnName = '';
+    /** @var string */
+    protected $columnName = '';
 
-    protected int $columnId;
+    /** @var int */
+    protected $columnId;
 
-    protected int $rowId;
+    /** @var int */
+    protected $rowId;
 
     public function __construct(string $cellAddress, ?Worksheet $worksheet = null)
     {

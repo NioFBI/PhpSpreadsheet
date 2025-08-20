@@ -8,96 +8,117 @@ class Layout
 {
     /**
      * layoutTarget.
+      * @var ?string
      */
-    private ?string $layoutTarget = null;
+    private $layoutTarget = null;
 
     /**
      * X Mode.
+      * @var ?string
      */
-    private ?string $xMode = null;
+    private $xMode = null;
 
     /**
      * Y Mode.
+      * @var ?string
      */
-    private ?string $yMode = null;
+    private $yMode = null;
 
     /**
      * X-Position.
+      * @var ?float
      */
-    private ?float $xPos = null;
+    private $xPos = null;
 
     /**
      * Y-Position.
+      * @var ?float
      */
-    private ?float $yPos = null;
+    private $yPos = null;
 
     /**
      * width.
+      * @var ?float
      */
-    private ?float $width = null;
+    private $width = null;
 
     /**
      * height.
+      * @var ?float
      */
-    private ?float $height = null;
+    private $height = null;
 
     /**
      * Position - t=top.
+      * @var string
      */
-    private string $dLblPos = '';
+    private $dLblPos = '';
 
-    private string $numFmtCode = '';
+    /** @var string */
+    private $numFmtCode = '';
 
-    private bool $numFmtLinked = false;
+    /** @var bool */
+    private $numFmtLinked = false;
 
     /**
      * show legend key
      * Specifies that legend keys should be shown in data labels.
+      * @var ?bool
      */
-    private ?bool $showLegendKey = null;
+    private $showLegendKey = null;
 
     /**
      * show value
      * Specifies that the value should be shown in a data label.
+      * @var ?bool
      */
-    private ?bool $showVal = null;
+    private $showVal = null;
 
     /**
      * show category name
      * Specifies that the category name should be shown in the data label.
+      * @var ?bool
      */
-    private ?bool $showCatName = null;
+    private $showCatName = null;
 
     /**
      * show data series name
      * Specifies that the series name should be shown in the data label.
+      * @var ?bool
      */
-    private ?bool $showSerName = null;
+    private $showSerName = null;
 
     /**
      * show percentage
      * Specifies that the percentage should be shown in the data label.
+      * @var ?bool
      */
-    private ?bool $showPercent = null;
+    private $showPercent = null;
 
     /**
      * show bubble size.
+      * @var ?bool
      */
-    private ?bool $showBubbleSize = null;
+    private $showBubbleSize = null;
 
     /**
      * show leader lines
      * Specifies that leader lines should be shown for the data label.
+      * @var ?bool
      */
-    private ?bool $showLeaderLines = null;
+    private $showLeaderLines = null;
 
-    private ?ChartColor $labelFillColor = null;
+    /** @var ?ChartColor */
+    private $labelFillColor = null;
 
-    private ?ChartColor $labelBorderColor = null;
+    /** @var ?ChartColor */
+    private $labelBorderColor = null;
 
-    private ?Font $labelFont = null;
+    /** @var ?Font */
+    private $labelFont = null;
 
-    private ?Properties $labelEffects = null;
+    /** @var ?Properties */
+    private $labelEffects = null;
 
     /**
      * Create a new Layout.

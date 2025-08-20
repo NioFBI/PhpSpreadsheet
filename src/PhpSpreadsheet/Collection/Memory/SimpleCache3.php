@@ -13,7 +13,8 @@ use Psr\SimpleCache\CacheInterface;
  */
 class SimpleCache3 implements CacheInterface
 {
-    private array $cache = [];
+    /** @var array */
+    private $cache = [];
 
     public function clear(): bool
     {

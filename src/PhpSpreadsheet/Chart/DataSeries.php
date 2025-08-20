@@ -48,63 +48,68 @@ class DataSeries
 
     /**
      * Series Plot Type.
+      * @var ?string
      */
-    private ?string $plotType;
+    private $plotType;
 
     /**
      * Plot Grouping Type.
+      * @var ?string
      */
-    private ?string $plotGrouping;
+    private $plotGrouping;
 
     /**
      * Plot Direction.
+      * @var string
      */
-    private string $plotDirection;
+    private $plotDirection;
 
     /**
      * Plot Style.
+      * @var ?string
      */
-    private ?string $plotStyle;
+    private $plotStyle;
 
     /**
      * Order of plots in Series.
      *
      * @var int[]
      */
-    private array $plotOrder;
+    private $plotOrder;
 
     /**
      * Plot Label.
      *
      * @var DataSeriesValues[]
      */
-    private array $plotLabel;
+    private $plotLabel;
 
     /**
      * Plot Category.
      *
      * @var DataSeriesValues[]
      */
-    private array $plotCategory;
+    private $plotCategory;
 
     /**
      * Smooth Line. Must be specified for both DataSeries and DataSeriesValues.
+      * @var bool
      */
-    private bool $smoothLine;
+    private $smoothLine;
 
     /**
      * Plot Values.
      *
      * @var DataSeriesValues[]
      */
-    private array $plotValues;
+    private $plotValues;
 
     /**
      * Plot Bubble Sizes.
      *
      * @var DataSeriesValues[]
      */
-    private array $plotBubbleSizes = [];
+    private $plotBubbleSizes = [];
 
     /**
      * Create a new DataSeries.

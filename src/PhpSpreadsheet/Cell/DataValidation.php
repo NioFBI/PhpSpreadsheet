@@ -32,68 +32,81 @@ class DataValidation
 
     /**
      * Formula 1.
+      * @var string
      */
-    private string $formula1 = '';
+    private $formula1 = '';
 
     /**
      * Formula 2.
+      * @var string
      */
-    private string $formula2 = '';
+    private $formula2 = '';
 
     /**
      * Type.
+      * @var string
      */
-    private string $type = self::TYPE_NONE;
+    private $type = self::TYPE_NONE;
 
     /**
      * Error style.
+      * @var string
      */
-    private string $errorStyle = self::STYLE_STOP;
+    private $errorStyle = self::STYLE_STOP;
 
     /**
      * Operator.
+      * @var string
      */
-    private string $operator = self::DEFAULT_OPERATOR;
+    private $operator = self::DEFAULT_OPERATOR;
 
     /**
      * Allow Blank.
+      * @var bool
      */
-    private bool $allowBlank = false;
+    private $allowBlank = false;
 
     /**
      * Show DropDown.
+      * @var bool
      */
-    private bool $showDropDown = false;
+    private $showDropDown = false;
 
     /**
      * Show InputMessage.
+      * @var bool
      */
-    private bool $showInputMessage = false;
+    private $showInputMessage = false;
 
     /**
      * Show ErrorMessage.
+      * @var bool
      */
-    private bool $showErrorMessage = false;
+    private $showErrorMessage = false;
 
     /**
      * Error title.
+      * @var string
      */
-    private string $errorTitle = '';
+    private $errorTitle = '';
 
     /**
      * Error.
+      * @var string
      */
-    private string $error = '';
+    private $error = '';
 
     /**
      * Prompt title.
+      * @var string
      */
-    private string $promptTitle = '';
+    private $promptTitle = '';
 
     /**
      * Prompt.
+      * @var string
      */
-    private string $prompt = '';
+    private $prompt = '';
 
     /**
      * Get Formula 1.
@@ -383,7 +396,8 @@ class DataValidation
         );
     }
 
-    private ?string $sqref = null;
+    /** @var ?string */
+    private $sqref = null;
 
     public function getSqref(): ?string
     {

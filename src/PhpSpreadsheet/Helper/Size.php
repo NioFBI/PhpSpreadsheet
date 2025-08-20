@@ -8,11 +8,14 @@ class Size implements Stringable
 {
     const REGEXP_SIZE_VALIDATION = '/^(?P<size>\d*\.?\d+)(?P<unit>pt|px|em)?$/i';
 
-    protected bool $valid = false;
+    /** @var bool */
+    protected $valid = false;
 
-    protected string $size = '';
+    /** @var string */
+    protected $size = '';
 
-    protected string $unit = '';
+    /** @var string */
+    protected $unit = '';
 
     public function __construct(string $size)
     {

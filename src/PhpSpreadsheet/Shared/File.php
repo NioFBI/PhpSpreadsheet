@@ -10,8 +10,9 @@ class File
 {
     /**
      * Use Temp or File Upload Temp for temporary files.
+      * @var bool
      */
-    protected static bool $useUploadTempDirectory = false;
+    protected static $useUploadTempDirectory = false;
 
     /**
      * Set the flag indicating whether the File Upload Temp directory should be used for temporary files.

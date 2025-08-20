@@ -38,113 +38,134 @@ class Xlsx extends BaseWriter
 {
     /**
      * Office2003 compatibility.
+      * @var bool
      */
-    private bool $office2003compatibility = false;
+    private $office2003compatibility = false;
 
     /**
      * Private Spreadsheet.
+      * @var Spreadsheet
      */
-    private Spreadsheet $spreadSheet;
+    private $spreadSheet;
 
     /**
      * Private string table.
      *
      * @var string[]
      */
-    private array $stringTable = [];
+    private $stringTable = [];
 
     /**
      * Private unique Conditional HashTable.
      *
      * @var HashTable<Conditional>
      */
-    private HashTable $stylesConditionalHashTable;
+    private $stylesConditionalHashTable;
 
     /**
      * Private unique Style HashTable.
      *
      * @var HashTable<\PhpOffice\PhpSpreadsheet\Style\Style>
      */
-    private HashTable $styleHashTable;
+    private $styleHashTable;
 
     /**
      * Private unique Fill HashTable.
      *
      * @var HashTable<Fill>
      */
-    private HashTable $fillHashTable;
+    private $fillHashTable;
 
     /**
      * Private unique \PhpOffice\PhpSpreadsheet\Style\Font HashTable.
      *
      * @var HashTable<Font>
      */
-    private HashTable $fontHashTable;
+    private $fontHashTable;
 
     /**
      * Private unique Borders HashTable.
      *
      * @var HashTable<Borders>
      */
-    private HashTable $bordersHashTable;
+    private $bordersHashTable;
 
     /**
      * Private unique NumberFormat HashTable.
      *
      * @var HashTable<NumberFormat>
      */
-    private HashTable $numFmtHashTable;
+    private $numFmtHashTable;
 
     /**
      * Private unique \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet\BaseDrawing HashTable.
      *
      * @var HashTable<BaseDrawing>
      */
-    private HashTable $drawingHashTable;
+    private $drawingHashTable;
 
     /**
      * Private handle for zip stream.
+      * @var ZipStream
      */
-    private ZipStream $zip;
+    private $zip;
 
-    private Chart $writerPartChart;
+    /** @var Chart */
+    private $writerPartChart;
 
-    private Comments $writerPartComments;
+    /** @var Comments */
+    private $writerPartComments;
 
-    private ContentTypes $writerPartContentTypes;
+    /** @var ContentTypes */
+    private $writerPartContentTypes;
 
-    private DocProps $writerPartDocProps;
+    /** @var DocProps */
+    private $writerPartDocProps;
 
-    private Drawing $writerPartDrawing;
+    /** @var Drawing */
+    private $writerPartDrawing;
 
-    private Rels $writerPartRels;
+    /** @var Rels */
+    private $writerPartRels;
 
-    private RelsRibbon $writerPartRelsRibbon;
+    /** @var RelsRibbon */
+    private $writerPartRelsRibbon;
 
-    private RelsVBA $writerPartRelsVBA;
+    /** @var RelsVBA */
+    private $writerPartRelsVBA;
 
-    private StringTable $writerPartStringTable;
+    /** @var StringTable */
+    private $writerPartStringTable;
 
-    private Style $writerPartStyle;
+    /** @var Style */
+    private $writerPartStyle;
 
-    private Theme $writerPartTheme;
+    /** @var Theme */
+    private $writerPartTheme;
 
-    private Table $writerPartTable;
+    /** @var Table */
+    private $writerPartTable;
 
-    private Workbook $writerPartWorkbook;
+    /** @var Workbook */
+    private $writerPartWorkbook;
 
-    private Worksheet $writerPartWorksheet;
+    /** @var Worksheet */
+    private $writerPartWorksheet;
 
-    private bool $explicitStyle0 = false;
+    /** @var bool */
+    private $explicitStyle0 = false;
 
-    private bool $useCSEArrays = false;
+    /** @var bool */
+    private $useCSEArrays = false;
 
-    private bool $useDynamicArray = false;
+    /** @var bool */
+    private $useDynamicArray = false;
 
     public const DEFAULT_FORCE_FULL_CALC = false;
 
     // Default changed from null in PhpSpreadsheet 4.0.0.
-    private ?bool $forceFullCalc = self::DEFAULT_FORCE_FULL_CALC;
+    /** @var ?bool */
+    private $forceFullCalc = self::DEFAULT_FORCE_FULL_CALC;
 
     /**
      * Create a new Xlsx Writer.
@@ -701,7 +722,7 @@ class Xlsx extends BaseWriter
     }
 
     /** @var string[] */
-    private array $pathNames = [];
+    private $pathNames = [];
 
     private function addZipFile(string $path, string $content): void
     {

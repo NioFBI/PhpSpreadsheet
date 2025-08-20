@@ -7,21 +7,29 @@ use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 
 class CellReferenceHelper
 {
-    protected string $beforeCellAddress;
+    /** @var string */
+    protected $beforeCellAddress;
 
-    protected int $beforeColumn;
+    /** @var int */
+    protected $beforeColumn;
 
-    protected bool $beforeColumnAbsolute = false;
+    /** @var bool */
+    protected $beforeColumnAbsolute = false;
 
-    protected string $beforeColumnString;
+    /** @var string */
+    protected $beforeColumnString;
 
-    protected int $beforeRow;
+    /** @var int */
+    protected $beforeRow;
 
-    protected bool $beforeRowAbsolute = false;
+    /** @var bool */
+    protected $beforeRowAbsolute = false;
 
-    protected int $numberOfColumns;
+    /** @var int */
+    protected $numberOfColumns;
 
-    protected int $numberOfRows;
+    /** @var int */
+    protected $numberOfRows;
 
     public function __construct(string $beforeCellAddress = 'A1', int $numberOfColumns = 0, int $numberOfRows = 0)
     {

@@ -10,11 +10,14 @@ use Stringable;
  */
 class RowRange implements AddressRange, Stringable
 {
-    protected ?Worksheet $worksheet;
+    /** @var ?Worksheet */
+    protected $worksheet;
 
-    protected int $from;
+    /** @var int */
+    protected $from;
 
-    protected int $to;
+    /** @var int */
+    protected $to;
 
     public function __construct(int $from, ?int $to = null, ?Worksheet $worksheet = null)
     {

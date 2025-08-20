@@ -7,9 +7,11 @@ use PhpOffice\PhpSpreadsheet\Exception;
 
 class Accounting extends CurrencyBase
 {
-    protected ?bool $overrideSpacing = true;
+    /** @var ?bool */
+    protected $overrideSpacing = true;
 
-    protected ?CurrencyNegative $overrideNegative = CurrencyNegative::parentheses;
+    /** @var ?CurrencyNegative */
+    protected $overrideNegative = CurrencyNegative::parentheses;
 
     /**
      * @throws Exception if the Intl extension and ICU version don't support Accounting formats

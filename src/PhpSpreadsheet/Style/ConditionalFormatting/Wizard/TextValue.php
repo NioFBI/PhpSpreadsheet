@@ -40,11 +40,14 @@ class TextValue extends WizardAbstract implements WizardInterface
         Conditional::OPERATOR_ENDSWITH => 'RIGHT(%s,LEN(%s))=%s',
     ];
 
-    protected string $operator;
+    /** @var string */
+    protected $operator;
 
-    protected string $operand;
+    /** @var string */
+    protected $operand;
 
-    protected string $operandValueType;
+    /** @var string */
+    protected $operandValueType;
 
     public function __construct(string $cellRange)
     {

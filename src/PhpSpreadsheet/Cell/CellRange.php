@@ -11,9 +11,11 @@ use Stringable;
  */
 class CellRange implements AddressRange, Stringable
 {
-    protected CellAddress $from;
+    /** @var CellAddress */
+    protected $from;
 
-    protected CellAddress $to;
+    /** @var CellAddress */
+    protected $to;
 
     public function __construct(CellAddress $from, CellAddress $to)
     {

@@ -4,12 +4,14 @@ namespace PhpOffice\PhpSpreadsheet\Worksheet;
 
 class Row
 {
-    private Worksheet $worksheet;
+    /** @var Worksheet */
+    private $worksheet;
 
     /**
      * Row index.
+      * @var int
      */
-    private int $rowIndex;
+    private $rowIndex;
 
     /**
      * Create a new row.

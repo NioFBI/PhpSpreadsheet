@@ -8,23 +8,27 @@ abstract class Dimension
 {
     /**
      * Visible?
+      * @var bool
      */
-    private bool $visible = true;
+    private $visible = true;
 
     /**
      * Outline level.
+      * @var int
      */
-    private int $outlineLevel = 0;
+    private $outlineLevel = 0;
 
     /**
      * Collapsed.
+      * @var bool
      */
-    private bool $collapsed = false;
+    private $collapsed = false;
 
     /**
      * Index to cellXf. Null value means row has no explicit cellXf format.
+      * @var ?int
      */
-    private ?int $xfIndex;
+    private $xfIndex;
 
     /**
      * Create a new Dimension.

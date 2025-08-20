@@ -161,85 +161,98 @@ class PageSetup
 
     /**
      * Paper size default.
+      * @var int
      */
-    private static int $paperSizeDefault = self::PAPERSIZE_LETTER;
+    private static $paperSizeDefault = self::PAPERSIZE_LETTER;
 
     /**
      * Paper size.
+      * @var ?int
      */
-    private ?int $paperSize = null;
+    private $paperSize = null;
 
     /**
      * Orientation default.
+      * @var string
      */
-    private static string $orientationDefault = self::ORIENTATION_DEFAULT;
+    private static $orientationDefault = self::ORIENTATION_DEFAULT;
 
     /**
      * Orientation.
+      * @var string
      */
-    private string $orientation;
+    private $orientation;
 
     /**
      * Scale (Print Scale).
      *
      * Print scaling. Valid values range from 10 to 400
      * This setting is overridden when fitToWidth and/or fitToHeight are in use
+      * @var ?int
      */
-    private ?int $scale = 100;
+    private $scale = 100;
 
     /**
      * Fit To Page
      * Whether scale or fitToWith / fitToHeight applies.
+      * @var bool
      */
-    private bool $fitToPage = false;
+    private $fitToPage = false;
 
     /**
      * Fit To Height
      * Number of vertical pages to fit on.
+      * @var ?int
      */
-    private ?int $fitToHeight = 1;
+    private $fitToHeight = 1;
 
     /**
      * Fit To Width
      * Number of horizontal pages to fit on.
+      * @var ?int
      */
-    private ?int $fitToWidth = 1;
+    private $fitToWidth = 1;
 
     /**
      * Columns to repeat at left.
      *
      * @var array{string, string} Containing start column and end column, empty array if option unset
      */
-    private array $columnsToRepeatAtLeft = ['', ''];
+    private $columnsToRepeatAtLeft = ['', ''];
 
     /**
      * Rows to repeat at top.
      *
      * @var int[] Containing start row number and end row number, empty array if option unset
      */
-    private array $rowsToRepeatAtTop = [0, 0];
+    private $rowsToRepeatAtTop = [0, 0];
 
     /**
      * Center page horizontally.
+      * @var bool
      */
-    private bool $horizontalCentered = false;
+    private $horizontalCentered = false;
 
     /**
      * Center page vertically.
+      * @var bool
      */
-    private bool $verticalCentered = false;
+    private $verticalCentered = false;
 
     /**
      * Print area.
+      * @var ?string
      */
-    private ?string $printArea = null;
+    private $printArea = null;
 
     /**
      * First page number.
+      * @var ?int
      */
-    private ?int $firstPageNumber = null;
+    private $firstPageNumber = null;
 
-    private string $pageOrder = self::PAGEORDER_DOWN_THEN_OVER;
+    /** @var string */
+    private $pageOrder = self::PAGEORDER_DOWN_THEN_OVER;
 
     /**
      * Create a new PageSetup.

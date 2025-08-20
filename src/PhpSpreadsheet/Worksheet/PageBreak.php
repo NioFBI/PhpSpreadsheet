@@ -8,11 +8,14 @@ use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 
 class PageBreak
 {
-    private int $breakType;
+    /** @var int */
+    private $breakType;
 
-    private string $coordinate;
+    /** @var string */
+    private $coordinate;
 
-    private int $maxColOrRow;
+    /** @var int */
+    private $maxColOrRow;
 
     /**
      * @param array{0: int, 1: int}|CellAddress|string $coordinate

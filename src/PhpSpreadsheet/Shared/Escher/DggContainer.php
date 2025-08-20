@@ -6,37 +6,41 @@ class DggContainer
 {
     /**
      * Maximum shape index of all shapes in all drawings increased by one.
+      * @var int
      */
-    private int $spIdMax;
+    private $spIdMax;
 
     /**
      * Total number of drawings saved.
+      * @var int
      */
-    private int $cDgSaved;
+    private $cDgSaved;
 
     /**
      * Total number of shapes saved (including group shapes).
+      * @var int
      */
-    private int $cSpSaved;
+    private $cSpSaved;
 
     /**
      * BLIP Store Container.
+      * @var ?DggContainer\BstoreContainer
      */
-    private ?DggContainer\BstoreContainer $bstoreContainer = null;
+    private $bstoreContainer = null;
 
     /**
      * Array of options for the drawing group.
      *
      * @var mixed[]
      */
-    private array $OPT = [];
+    private $OPT = [];
 
     /**
      * Array of identifier clusters containg information about the maximum shape identifiers.
      *
      * @var mixed[]
      */
-    private array $IDCLs = [];
+    private $IDCLs = [];
 
     /**
      * Get maximum shape index of all shapes in all drawings (plus one).

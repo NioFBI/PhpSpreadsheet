@@ -31,23 +31,32 @@ class CellMatcher
         Conditional::CONDITION_UNIQUE => "COUNTIF('%s'!%s,%s)=1",
     ];
 
-    protected Cell $cell;
+    /** @var Cell */
+    protected $cell;
 
-    protected int $cellRow;
+    /** @var int */
+    protected $cellRow;
 
-    protected Worksheet $worksheet;
+    /** @var Worksheet */
+    protected $worksheet;
 
-    protected int $cellColumn;
+    /** @var int */
+    protected $cellColumn;
 
-    protected string $conditionalRange;
+    /** @var string */
+    protected $conditionalRange;
 
-    protected string $referenceCell;
+    /** @var string */
+    protected $referenceCell;
 
-    protected int $referenceRow;
+    /** @var int */
+    protected $referenceRow;
 
-    protected int $referenceColumn;
+    /** @var int */
+    protected $referenceColumn;
 
-    protected Calculation $engine;
+    /** @var Calculation */
+    protected $engine;
 
     public function __construct(Cell $cell, string $conditionalRange)
     {

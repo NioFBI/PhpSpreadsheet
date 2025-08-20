@@ -31,61 +31,68 @@ class Xls extends BaseWriter
 {
     /**
      * PhpSpreadsheet object.
+      * @var Spreadsheet
      */
-    private Spreadsheet $spreadsheet;
+    private $spreadsheet;
 
     /**
      * Total number of shared strings in workbook.
+      * @var int
      */
-    private int $strTotal = 0;
+    private $strTotal = 0;
 
     /**
      * Number of unique shared strings in workbook.
+      * @var int
      */
-    private int $strUnique = 0;
+    private $strUnique = 0;
 
     /**
      * Array of unique shared strings in workbook.
      *
      * @var array<string, int>
      */
-    private array $strTable = [];
+    private $strTable = [];
 
     /**
      * Color cache. Mapping between RGB value and color index.
      *
      * @var mixed[]
      */
-    private array $colors;
+    private $colors;
 
     /**
      * Formula parser.
+      * @var Parser
      */
-    private Parser $parser;
+    private $parser;
 
     /**
      * Identifier clusters for drawings. Used in MSODRAWINGGROUP record.
      *
      * @var mixed[]
      */
-    private array $IDCLs;
+    private $IDCLs;
 
     /**
      * Basic OLE object summary information.
+      * @var string
      */
-    private string $summaryInformation;
+    private $summaryInformation;
 
     /**
      * Extended OLE object document summary information.
+      * @var string
      */
-    private string $documentSummaryInformation;
+    private $documentSummaryInformation;
 
-    private Workbook $writerWorkbook;
+    /** @var Workbook */
+    private $writerWorkbook;
 
     /**
      * @var Worksheet[]
      */
-    private array $writerWorksheets;
+    private $writerWorksheets;
 
     /**
      * Create a new Xls Writer.
@@ -427,7 +434,8 @@ class Xls extends BaseWriter
         $bstoreContainer->addBSE($BSE);
     }
 
-    private static int $two = 2; // phpstan silliness
+    /** @var int */
+    private static $two = 2; // phpstan silliness
 
     private function processDrawing(BstoreContainer &$bstoreContainer, Drawing $drawing): void
     {

@@ -21,112 +21,135 @@ class BaseDrawing implements IComparable
 
     /**
      * The editAs attribute, used only with two cell anchor.
+      * @var string
      */
-    protected string $editAs = '';
+    protected $editAs = '';
 
     /**
      * Image counter.
+      * @var int
      */
-    private static int $imageCounter = 0;
+    private static $imageCounter = 0;
 
     /**
      * Image index.
+      * @var int
      */
-    private int $imageIndex;
+    private $imageIndex;
 
     /**
      * Name.
+      * @var string
      */
-    protected string $name = '';
+    protected $name = '';
 
     /**
      * Description.
+      * @var string
      */
-    protected string $description = '';
+    protected $description = '';
 
     /**
      * Worksheet.
+      * @var ?Worksheet
      */
-    protected ?Worksheet $worksheet = null;
+    protected $worksheet = null;
 
     /**
      * Coordinates.
+      * @var string
      */
-    protected string $coordinates = 'A1';
+    protected $coordinates = 'A1';
 
     /**
      * Offset X.
+      * @var int
      */
-    protected int $offsetX = 0;
+    protected $offsetX = 0;
 
     /**
      * Offset Y.
+      * @var int
      */
-    protected int $offsetY = 0;
+    protected $offsetY = 0;
 
     /**
      * Coordinates2.
+      * @var string
      */
-    protected string $coordinates2 = '';
+    protected $coordinates2 = '';
 
     /**
      * Offset X2.
+      * @var int
      */
-    protected int $offsetX2 = 0;
+    protected $offsetX2 = 0;
 
     /**
      * Offset Y2.
+      * @var int
      */
-    protected int $offsetY2 = 0;
+    protected $offsetY2 = 0;
 
     /**
      * Width.
+      * @var int
      */
-    protected int $width = 0;
+    protected $width = 0;
 
     /**
      * Height.
+      * @var int
      */
-    protected int $height = 0;
+    protected $height = 0;
 
     /**
      * Pixel width of image. See $width for the size the Drawing will be in the sheet.
+      * @var int
      */
-    protected int $imageWidth = 0;
+    protected $imageWidth = 0;
 
     /**
      * Pixel width of image. See $height for the size the Drawing will be in the sheet.
+      * @var int
      */
-    protected int $imageHeight = 0;
+    protected $imageHeight = 0;
 
     /**
      * Proportional resize.
+      * @var bool
      */
-    protected bool $resizeProportional = true;
+    protected $resizeProportional = true;
 
     /**
      * Rotation.
+      * @var int
      */
-    protected int $rotation = 0;
+    protected $rotation = 0;
 
-    protected bool $flipVertical = false;
+    /** @var bool */
+    protected $flipVertical = false;
 
-    protected bool $flipHorizontal = false;
+    /** @var bool */
+    protected $flipHorizontal = false;
 
     /**
      * Shadow.
+      * @var Shadow
      */
-    protected Shadow $shadow;
+    protected $shadow;
 
     /**
      * Image hyperlink.
+      * @var ?Hyperlink
      */
-    private ?Hyperlink $hyperlink = null;
+    private $hyperlink = null;
 
     /**
      * Image type.
+      * @var int
      */
-    protected int $type = IMAGETYPE_UNKNOWN;
+    protected $type = IMAGETYPE_UNKNOWN;
 
     /** @var null|SimpleXMLElement|string[] */
     protected $srcRect = [];
@@ -134,8 +157,9 @@ class BaseDrawing implements IComparable
     /**
      * Percentage multiplied by 100,000, e.g. 40% = 40,000.
      * Opacity=x is the same as transparency=100000-x.
+      * @var ?int
      */
-    protected ?int $opacity = null;
+    protected $opacity = null;
 
     /**
      * Create a new BaseDrawing.

@@ -20,24 +20,27 @@ class Styles extends BaseParserClass
 {
     /**
      * Theme instance.
+      * @var ?Theme
      */
-    private ?Theme $theme = null;
+    private $theme = null;
 
     /** @var string[] */
-    private array $workbookPalette = [];
+    private $workbookPalette = [];
 
     /** @var mixed[] */
-    private array $styles = [];
+    private $styles = [];
 
     /** @var array<SimpleXMLElement|stdClass> */
-    private array $cellStyles = [];
+    private $cellStyles = [];
 
-    private SimpleXMLElement $styleXml;
+    /** @var SimpleXMLElement */
+    private $styleXml;
 
-    private string $namespace = '';
+    /** @var string */
+    private $namespace = '';
 
     /** @var array<string, int> */
-    private array $fontCharsets = [];
+    private $fontCharsets = [];
 
     /** @return array<string, int> */
     public function getFontCharsets(): array

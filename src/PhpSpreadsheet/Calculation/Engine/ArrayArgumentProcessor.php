@@ -7,7 +7,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\Functions;
 
 class ArrayArgumentProcessor
 {
-    private static ArrayArgumentHelper $arrayArgumentHelper;
+    /** @var ArrayArgumentHelper */
+    private static $arrayArgumentHelper;
 
     /** @return mixed[] */
     public static function processArguments(

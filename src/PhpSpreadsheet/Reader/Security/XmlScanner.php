@@ -9,7 +9,8 @@ class XmlScanner
     private const ENCODING_PATTERN = '/encoding\s*=\s*(["\'])(.+?)\1/s';
     private const ENCODING_UTF7 = '/encoding\s*=\s*(["\'])UTF-7\1/si';
 
-    private string $pattern;
+    /** @var string */
+    private $pattern;
 
     /** @var ?callable */
     private $callback;

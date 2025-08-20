@@ -7,7 +7,8 @@ use SimpleXMLElement;
 
 class WorkbookView
 {
-    private Spreadsheet $spreadsheet;
+    /** @var Spreadsheet */
+    private $spreadsheet;
 
     public function __construct(Spreadsheet $spreadsheet)
     {

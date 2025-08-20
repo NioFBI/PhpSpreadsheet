@@ -26,9 +26,11 @@ class DataValidations
         'textlength' => DataValidation::TYPE_TEXTLENGTH,
     ];
 
-    private int $thisRow = 0;
+    /** @var int */
+    private $thisRow = 0;
 
-    private int $thisColumn = 0;
+    /** @var int */
+    private $thisColumn = 0;
 
     /** @param string[] $matches */
     private function replaceR1C1(array $matches): string

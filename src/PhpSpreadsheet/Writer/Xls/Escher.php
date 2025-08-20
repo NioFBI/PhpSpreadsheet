@@ -16,27 +16,29 @@ class Escher
 {
     /**
      * The object we are writing.
+      * @var Blip|BSE|BstoreContainer|DgContainer|DggContainer|Escher|SpContainer|SpgrContainer|SharedEscher
      */
-    private Blip|BSE|BstoreContainer|DgContainer|DggContainer|Escher|SpContainer|SpgrContainer|SharedEscher $object;
+    private $object;
 
     /**
      * The written binary data.
+      * @var string
      */
-    private string $data;
+    private $data;
 
     /**
      * Shape offsets. Positions in binary stream where a new shape record begins.
      *
      * @var int[]
      */
-    private array $spOffsets;
+    private $spOffsets;
 
     /**
      * Shape types.
      *
      * @var mixed[]
      */
-    private array $spTypes;
+    private $spTypes;
 
     /**
      * Constructor.

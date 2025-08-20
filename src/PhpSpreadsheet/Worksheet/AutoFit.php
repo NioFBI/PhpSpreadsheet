@@ -8,7 +8,8 @@ use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 
 class AutoFit
 {
-    protected Worksheet $worksheet;
+    /** @var Worksheet */
+    protected $worksheet;
 
     public function __construct(Worksheet $worksheet)
     {

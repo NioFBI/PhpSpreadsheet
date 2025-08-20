@@ -533,38 +533,50 @@ class Html
         'yellowgreen' => '9acd32',
     ];
 
-    private ?string $face = null;
+    /** @var ?string */
+    private $face = null;
 
-    private ?string $size = null;
+    /** @var ?string */
+    private $size = null;
 
-    private ?string $color = null;
+    /** @var ?string */
+    private $color = null;
 
-    private bool $bold = false;
+    /** @var bool */
+    private $bold = false;
 
-    private bool $italic = false;
+    /** @var bool */
+    private $italic = false;
 
-    private bool $underline = false;
+    /** @var bool */
+    private $underline = false;
 
-    private bool $superscript = false;
+    /** @var bool */
+    private $superscript = false;
 
-    private bool $subscript = false;
+    /** @var bool */
+    private $subscript = false;
 
-    private bool $strikethrough = false;
+    /** @var bool */
+    private $strikethrough = false;
 
     /** @var callable[] */
-    protected array $startTagCallbacks;
+    protected $startTagCallbacks;
 
     /** @var callable[] */
-    protected array $endTagCallbacks;
+    protected $endTagCallbacks;
 
     /** @var mixed[] */
-    private array $stack = [];
+    private $stack = [];
 
-    public string $stringData = '';
+    /** @var string */
+    public $stringData = '';
 
-    private RichText $richTextObject;
+    /** @var RichText */
+    private $richTextObject;
 
-    private bool $preserveWhiteSpace = false;
+    /** @var bool */
+    private $preserveWhiteSpace = false;
 
     public function __construct()
     {

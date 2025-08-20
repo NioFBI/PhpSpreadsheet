@@ -9,8 +9,9 @@ class TimeZone
 {
     /**
      * Default Timezone used for date/time conversions.
+      * @var string
      */
-    protected static string $timezone = 'UTC';
+    protected static $timezone = 'UTC';
 
     /**
      * Validate a Timezone name.

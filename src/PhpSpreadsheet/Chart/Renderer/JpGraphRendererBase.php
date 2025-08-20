@@ -30,7 +30,8 @@ abstract class JpGraphRendererBase implements IRenderer
 
     private const DEFAULT_HEIGHT = 480.0;
 
-    private static $colourSet = [
+    /** @var static */
+    private $colourSet = [
         'mediumpurple1', 'palegreen3', 'gold1', 'cadetblue1',
         'darkmagenta', 'coral', 'dodgerblue3', 'eggplant',
         'mediumblue', 'magenta', 'sandybrown', 'cyan',
@@ -38,15 +39,19 @@ abstract class JpGraphRendererBase implements IRenderer
         'goldenrod2',
     ];
 
-    private static array $markSet;
+    /** @var array */
+    private static $markSet;
 
-    private Chart $chart;
+    /** @var Chart */
+    private $chart;
 
     private $graph;
 
-    private static $plotColour = 0;
+    /** @var static */
+    private $plotColour = 0;
 
-    private static $plotMark = 0;
+    /** @var static */
+    private $plotMark = 0;
 
     /**
      * Create a new jpgraph.

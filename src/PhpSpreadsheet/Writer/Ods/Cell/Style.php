@@ -22,7 +22,8 @@ class Style
     public const TABLE_STYLE_PREFIX = 'ta';
     public const INDENT_TO_INCHES = 0.1043; // undocumented, used trial and error
 
-    private XMLWriter $writer;
+    /** @var XMLWriter */
+    private $writer;
 
     public function __construct(XMLWriter $writer)
     {

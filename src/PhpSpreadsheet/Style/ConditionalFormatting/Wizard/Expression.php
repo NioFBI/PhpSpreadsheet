@@ -11,7 +11,8 @@ use PhpOffice\PhpSpreadsheet\Style\ConditionalFormatting\Wizard;
  */
 class Expression extends WizardAbstract implements WizardInterface
 {
-    protected string $expression;
+    /** @var string */
+    protected $expression;
 
     public function __construct(string $cellRange)
     {

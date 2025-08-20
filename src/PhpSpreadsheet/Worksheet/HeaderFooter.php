@@ -93,60 +93,70 @@ class HeaderFooter
 
     /**
      * OddHeader.
+      * @var string
      */
-    private string $oddHeader = '';
+    private $oddHeader = '';
 
     /**
      * OddFooter.
+      * @var string
      */
-    private string $oddFooter = '';
+    private $oddFooter = '';
 
     /**
      * EvenHeader.
+      * @var string
      */
-    private string $evenHeader = '';
+    private $evenHeader = '';
 
     /**
      * EvenFooter.
+      * @var string
      */
-    private string $evenFooter = '';
+    private $evenFooter = '';
 
     /**
      * FirstHeader.
+      * @var string
      */
-    private string $firstHeader = '';
+    private $firstHeader = '';
 
     /**
      * FirstFooter.
+      * @var string
      */
-    private string $firstFooter = '';
+    private $firstFooter = '';
 
     /**
      * Different header for Odd/Even, defaults to false.
+      * @var bool
      */
-    private bool $differentOddEven = false;
+    private $differentOddEven = false;
 
     /**
      * Different header for first page, defaults to false.
+      * @var bool
      */
-    private bool $differentFirst = false;
+    private $differentFirst = false;
 
     /**
      * Scale with document, defaults to true.
+      * @var bool
      */
-    private bool $scaleWithDocument = true;
+    private $scaleWithDocument = true;
 
     /**
      * Align with margins, defaults to true.
+      * @var bool
      */
-    private bool $alignWithMargins = true;
+    private $alignWithMargins = true;
 
     /**
      * Header/footer images.
      *
      * @var HeaderFooterDrawing[]
      */
-    private array $headerFooterImages = [];
+    private $headerFooterImages = [];
 
     /**
      * Create a new HeaderFooter.

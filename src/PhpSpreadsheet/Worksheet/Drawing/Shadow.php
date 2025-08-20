@@ -19,42 +19,49 @@ class Shadow implements IComparable
 
     /**
      * Visible.
+      * @var bool
      */
-    private bool $visible;
+    private $visible;
 
     /**
      * Blur radius.
      *
      * Defaults to 6
+      * @var int
      */
-    private int $blurRadius;
+    private $blurRadius;
 
     /**
      * Shadow distance.
      *
      * Defaults to 2
+      * @var int
      */
-    private int $distance;
+    private $distance;
 
     /**
      * Shadow direction (in degrees).
+      * @var int
      */
-    private int $direction;
+    private $direction;
 
     /**
      * Shadow alignment.
+      * @var string
      */
-    private string $alignment;
+    private $alignment;
 
     /**
      * Color.
+      * @var Color
      */
-    private Color $color;
+    private $color;
 
     /**
      * Alpha.
+      * @var int
      */
-    private int $alpha;
+    private $alpha;
 
     /**
      * Create a new Shadow.

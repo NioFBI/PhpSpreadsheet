@@ -7,8 +7,9 @@ class PowerBestFit extends BestFit
     /**
      * Algorithm type to use for best-fit
      * (Name of this Trend class).
+      * @var string
      */
-    protected string $bestFitType = 'power';
+    protected $bestFitType = 'power';
 
     /**
      * Return the Y-Value for a specified value of X.

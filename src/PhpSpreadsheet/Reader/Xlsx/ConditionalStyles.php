@@ -18,17 +18,20 @@ use stdClass;
 
 class ConditionalStyles
 {
-    private Worksheet $worksheet;
+    /** @var Worksheet */
+    private $worksheet;
 
-    private SimpleXMLElement $worksheetXml;
+    /** @var SimpleXMLElement */
+    private $worksheetXml;
 
     /** @var string[] */
-    private array $ns;
+    private $ns;
 
     /** @var Style[] */
-    private array $dxfs;
+    private $dxfs;
 
-    private StyleReader $styleReader;
+    /** @var StyleReader */
+    private $styleReader;
 
     /** @param Style[] $dxfs */
     public function __construct(Worksheet $workSheet, SimpleXMLElement $worksheetXml, array $dxfs, StyleReader $styleReader)

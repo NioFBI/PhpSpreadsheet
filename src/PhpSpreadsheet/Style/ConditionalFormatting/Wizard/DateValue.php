@@ -46,7 +46,8 @@ class DateValue extends WizardAbstract implements WizardInterface
         Conditional::TIMEPERIOD_NEXT_MONTH => 'AND(MONTH(%s)=MONTH(EDATE(TODAY(),0+1)),YEAR(%s)=YEAR(EDATE(TODAY(),0+1)))',
     ];
 
-    protected string $operator;
+    /** @var string */
+    protected $operator;
 
     public function __construct(string $cellRange)
     {

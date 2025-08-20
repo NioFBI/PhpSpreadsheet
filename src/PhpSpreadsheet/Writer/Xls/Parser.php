@@ -71,51 +71,55 @@ class Parser
 
     /**
      * The index of the character we are currently looking at.
+      * @var int
      */
-    public int $currentCharacter;
+    public $currentCharacter;
 
     /**
      * The token we are working on.
+      * @var string
      */
-    public string $currentToken;
+    public $currentToken;
 
     /**
      * The formula to parse.
+      * @var string
      */
-    private string $formula;
+    private $formula;
 
     /**
      * The character ahead of the current char.
+      * @var string
      */
-    public string $lookAhead;
+    public $lookAhead;
 
     /**
      * The parse tree to be generated.
      *
      * @var mixed[]|string
      */
-    public array|string $parseTree;
+    public $parseTree;
 
     /**
      * Array of external sheets.
      *
      * @var array<string, int>
      */
-    private array $externalSheets;
+    private $externalSheets;
 
     /**
      * Array of sheet references in the form of REF structures.
      *
      * @var array<int|string, int|string>
      */
-    public array $references;
+    public $references;
 
     /**
      * The Excel ptg indices.
      *
      * @var array<string, int>
      */
-    private array $ptg = [
+    private $ptg = [
         'ptgExp' => 0x01,
         'ptgTbl' => 0x02,
         'ptgAdd' => 0x03,
@@ -229,7 +233,7 @@ class Parser
      *
      * @var array<string, array{int, int, int, int}>
      */
-    private array $functions = [
+    private $functions = [
         // function                  ptg  args  class  vol
         'COUNT' => [0, -1, 0, 0],
         'IF' => [1, -1, 1, 0],
@@ -485,7 +489,8 @@ class Parser
         'BAHTTEXT' => [368, 1, 0, 0],
     ];
 
-    private Spreadsheet $spreadsheet;
+    /** @var Spreadsheet */
+    private $spreadsheet;
 
     /**
      * The class constructor.
@@ -770,7 +775,8 @@ class Parser
         };
     }
 
-    private bool $tryDefinedName = false;
+    /** @var bool */
+    private $tryDefinedName = false;
 
     private function convertDefinedName(string $name): string
     {

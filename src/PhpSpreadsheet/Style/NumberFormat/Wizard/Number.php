@@ -10,7 +10,8 @@ class Number extends NumberBase implements Wizard
 
     public const WITHOUT_THOUSANDS_SEPARATOR = false;
 
-    protected bool $thousandsSeparator = true;
+    /** @var bool */
+    protected $thousandsSeparator = true;
 
     /**
      * @param int $decimals number of decimal places to display, in the range 0-30

@@ -35,7 +35,7 @@ class Xml extends BaseReader
      *
      * @var mixed[]
      */
-    protected array $styles = [];
+    protected $styles = [];
 
     /**
      * Create a new Excel2003XML Reader instance.
@@ -58,9 +58,11 @@ class Xml extends BaseReader
         return $contents;
     }
 
-    private string $fileContents = '';
+    /** @var string */
+    private $fileContents = '';
 
-    private string $xmlFailMessage = '';
+    /** @var string */
+    private $xmlFailMessage = '';
 
     /** @return mixed[] */
     public static function xmlMappings(): array

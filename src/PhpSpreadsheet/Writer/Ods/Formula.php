@@ -10,7 +10,8 @@ use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
 class Formula
 {
     /** @var string[] */
-    private array $definedNames = [];
+    /** @var array */
+    private $definedNames = [];
 
     /**
      * @param DefinedName[] $definedNames

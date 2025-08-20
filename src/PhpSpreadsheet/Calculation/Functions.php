@@ -31,13 +31,15 @@ class Functions
 
     /**
      * Compatibility mode to use for error checking and responses.
+      * @var string
      */
-    protected static string $compatibilityMode = self::COMPATIBILITY_EXCEL;
+    protected static $compatibilityMode = self::COMPATIBILITY_EXCEL;
 
     /**
      * Data Type to use when returning date values.
+      * @var string
      */
-    protected static string $returnDateType = self::RETURNDATE_EXCEL;
+    protected static $returnDateType = self::RETURNDATE_EXCEL;
 
     /**
      * Set the Compatibility Mode.

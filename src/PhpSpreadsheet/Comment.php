@@ -15,53 +15,63 @@ class Comment implements IComparable, Stringable
 {
     /**
      * Author.
+      * @var string
      */
-    private string $author;
+    private $author;
 
     /**
      * Rich text comment.
+      * @var RichText
      */
-    private RichText $text;
+    private $text;
 
     /**
      * Comment width (CSS style, i.e. XXpx or YYpt).
+      * @var string
      */
-    private string $width = '96pt';
+    private $width = '96pt';
 
     /**
      * Left margin (CSS style, i.e. XXpx or YYpt).
+      * @var string
      */
-    private string $marginLeft = '59.25pt';
+    private $marginLeft = '59.25pt';
 
     /**
      * Top margin (CSS style, i.e. XXpx or YYpt).
+      * @var string
      */
-    private string $marginTop = '1.5pt';
+    private $marginTop = '1.5pt';
 
     /**
      * Visible.
+      * @var bool
      */
-    private bool $visible = false;
+    private $visible = false;
 
     /**
      * Comment height (CSS style, i.e. XXpx or YYpt).
+      * @var string
      */
-    private string $height = '55.5pt';
+    private $height = '55.5pt';
 
     /**
      * Comment fill color.
+      * @var Color
      */
-    private Color $fillColor;
+    private $fillColor;
 
     /**
      * Alignment.
+      * @var string
      */
-    private string $alignment;
+    private $alignment;
 
     /**
      * Background image in comment.
+      * @var Drawing
      */
-    private Drawing $backgroundImage;
+    private $backgroundImage;
 
     public const TEXTBOX_DIRECTION_RTL = 'rtl';
     public const TEXTBOX_DIRECTION_LTR = 'ltr';
@@ -69,7 +79,8 @@ class Comment implements IComparable, Stringable
     public const TEXTBOX_DIRECTION_AUTO = 'auto';
     public const TEXTBOX_DIRECTION_CONTEXT = 'auto';
 
-    private string $textboxDirection = '';
+    /** @var string */
+    private $textboxDirection = '';
 
     /**
      * Create a new Comment.

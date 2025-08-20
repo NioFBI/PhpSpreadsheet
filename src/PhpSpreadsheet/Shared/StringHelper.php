@@ -242,28 +242,33 @@ class StringHelper
 
     /**
      * Decimal separator.
+      * @var ?string
      */
-    private static ?string $decimalSeparator = null;
+    private static $decimalSeparator = null;
 
     /**
      * Thousands separator.
+      * @var ?string
      */
-    private static ?string $thousandsSeparator = null;
+    private static $thousandsSeparator = null;
 
     /**
      * Currency code.
+      * @var ?string
      */
-    private static ?string $currencyCode = null;
+    private static $currencyCode = null;
 
     /**
      * Is iconv extension avalable?
+      * @var ?bool
      */
-    private static ?bool $isIconvEnabled = null;
+    private static $isIconvEnabled = null;
 
     /**
      * iconv options.
+      * @var string
      */
-    private static string $iconvOptions = '//IGNORE//TRANSLIT';
+    private static $iconvOptions = '//IGNORE//TRANSLIT';
 
     /**
      * Get whether iconv extension is available.

@@ -35,9 +35,11 @@ class Root extends PPS
      */
     private $fileHandle;
 
-    private ?int $smallBlockSize = null;
+    /** @var ?int */
+    private $smallBlockSize = null;
 
-    private ?int $bigBlockSize = null;
+    /** @var ?int */
+    private $bigBlockSize = null;
 
     /**
      * @param null|float|int $time_1st A timestamp

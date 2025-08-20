@@ -14,7 +14,7 @@ class RichText implements IComparable, Stringable
      *
      * @var ITextElement[]
      */
-    private array $richTextElements;
+    private $richTextElements;
 
     /**
      * Create a new RichText instance.

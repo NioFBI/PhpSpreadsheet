@@ -11,58 +11,69 @@ class Csv extends BaseWriter
 {
     /**
      * PhpSpreadsheet object.
+      * @var Spreadsheet
      */
-    private Spreadsheet $spreadsheet;
+    private $spreadsheet;
 
     /**
      * Delimiter.
+      * @var string
      */
-    private string $delimiter = ',';
+    private $delimiter = ',';
 
     /**
      * Enclosure.
+      * @var string
      */
-    private string $enclosure = '"';
+    private $enclosure = '"';
 
     /**
      * Line ending.
+      * @var string
      */
-    private string $lineEnding = PHP_EOL;
+    private $lineEnding = PHP_EOL;
 
     /**
      * Sheet index to write.
+      * @var int
      */
-    private int $sheetIndex = 0;
+    private $sheetIndex = 0;
 
     /**
      * Whether to write a UTF8 BOM.
+      * @var bool
      */
-    private bool $useBOM = false;
+    private $useBOM = false;
 
     /**
      * Whether to write a Separator line as the first line of the file
      *     sep=x.
+      * @var bool
      */
-    private bool $includeSeparatorLine = false;
+    private $includeSeparatorLine = false;
 
     /**
      * Whether to write a fully Excel compatible CSV file.
+      * @var bool
      */
-    private bool $excelCompatibility = false;
+    private $excelCompatibility = false;
 
     /**
      * Output encoding.
+      * @var string
      */
-    private string $outputEncoding = '';
+    private $outputEncoding = '';
 
     /**
      * Whether number of columns should be allowed to vary
      * between rows, or use a fixed range based on the max
      * column overall.
+      * @var bool
      */
-    private bool $variableColumns = false;
+    private $variableColumns = false;
 
-    private bool $preferHyperlinkToLabel = false;
+    /** @var bool */
+    private $preferHyperlinkToLabel = false;
 
     /**
      * Create a new CSV.
@@ -258,7 +269,8 @@ class Csv extends BaseWriter
         return $this;
     }
 
-    private bool $enclosureRequired = true;
+    /** @var bool */
+    private $enclosureRequired = true;
 
     public function setEnclosureRequired(bool $value): self
     {

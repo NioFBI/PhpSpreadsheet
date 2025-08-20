@@ -69,160 +69,179 @@ class Worksheet
 
     /**
      * Parent spreadsheet.
+      * @var ?Spreadsheet
      */
-    private ?Spreadsheet $parent = null;
+    private $parent = null;
 
     /**
      * Collection of cells.
+      * @var Cells
      */
-    private Cells $cellCollection;
+    private $cellCollection;
 
     /**
      * Collection of row dimensions.
      *
      * @var RowDimension[]
      */
-    private array $rowDimensions = [];
+    private $rowDimensions = [];
 
     /**
      * Default row dimension.
+      * @var RowDimension
      */
-    private RowDimension $defaultRowDimension;
+    private $defaultRowDimension;
 
     /**
      * Collection of column dimensions.
      *
      * @var ColumnDimension[]
      */
-    private array $columnDimensions = [];
+    private $columnDimensions = [];
 
     /**
      * Default column dimension.
+      * @var ColumnDimension
      */
-    private ColumnDimension $defaultColumnDimension;
+    private $defaultColumnDimension;
 
     /**
      * Collection of drawings.
      *
      * @var ArrayObject<int, BaseDrawing>
      */
-    private ArrayObject $drawingCollection;
+    private $drawingCollection;
 
     /**
      * Collection of Chart objects.
      *
      * @var ArrayObject<int, Chart>
      */
-    private ArrayObject $chartCollection;
+    private $chartCollection;
 
     /**
      * Collection of Table objects.
      *
      * @var ArrayObject<int, Table>
      */
-    private ArrayObject $tableCollection;
+    private $tableCollection;
 
     /**
      * Worksheet title.
+      * @var string
      */
-    private string $title = '';
+    private $title = '';
 
     /**
      * Sheet state.
+      * @var string
      */
-    private string $sheetState;
+    private $sheetState;
 
     /**
      * Page setup.
+      * @var PageSetup
      */
-    private PageSetup $pageSetup;
+    private $pageSetup;
 
     /**
      * Page margins.
+      * @var PageMargins
      */
-    private PageMargins $pageMargins;
+    private $pageMargins;
 
     /**
      * Page header/footer.
+      * @var HeaderFooter
      */
-    private HeaderFooter $headerFooter;
+    private $headerFooter;
 
     /**
      * Sheet view.
+      * @var SheetView
      */
-    private SheetView $sheetView;
+    private $sheetView;
 
     /**
      * Protection.
+      * @var Protection
      */
-    private Protection $protection;
+    private $protection;
 
     /**
      * Conditional styles. Indexed by cell coordinate, e.g. 'A1'.
      *
      * @var Conditional[][]
      */
-    private array $conditionalStylesCollection = [];
+    private $conditionalStylesCollection = [];
 
     /**
      * Collection of row breaks.
      *
      * @var PageBreak[]
      */
-    private array $rowBreaks = [];
+    private $rowBreaks = [];
 
     /**
      * Collection of column breaks.
      *
      * @var PageBreak[]
      */
-    private array $columnBreaks = [];
+    private $columnBreaks = [];
 
     /**
      * Collection of merged cell ranges.
      *
      * @var string[]
      */
-    private array $mergeCells = [];
+    private $mergeCells = [];
 
     /**
      * Collection of protected cell ranges.
      *
      * @var ProtectedRange[]
      */
-    private array $protectedCells = [];
+    private $protectedCells = [];
 
     /**
      * Autofilter Range and selection.
+      * @var AutoFilter
      */
-    private AutoFilter $autoFilter;
+    private $autoFilter;
 
     /**
      * Freeze pane.
+      * @var ?string
      */
-    private ?string $freezePane = null;
+    private $freezePane = null;
 
     /**
      * Default position of the right bottom pane.
+      * @var ?string
      */
-    private ?string $topLeftCell = null;
+    private $topLeftCell = null;
 
-    private string $paneTopLeftCell = '';
+    /** @var string */
+    private $paneTopLeftCell = '';
 
-    private string $activePane = '';
+    /** @var string */
+    private $activePane = '';
 
-    private int $xSplit = 0;
+    /** @var int */
+    private $xSplit = 0;
 
-    private int $ySplit = 0;
+    /** @var int */
+    private $ySplit = 0;
 
-    private string $paneState = '';
+    /** @var string */
+    private $paneState = '';
 
     /**
      * Properties of the 4 panes.
      *
      * @var (null|Pane)[]
      */
-    private array $panes = [
+    private $panes = [
         'bottomRight' => null,
         'bottomLeft' => null,
         'topRight' => null,
@@ -231,67 +250,77 @@ class Worksheet
 
     /**
      * Show gridlines?
+      * @var bool
      */
-    private bool $showGridlines = true;
+    private $showGridlines = true;
 
     /**
      * Print gridlines?
+      * @var bool
      */
-    private bool $printGridlines = false;
+    private $printGridlines = false;
 
     /**
      * Show row and column headers?
+      * @var bool
      */
-    private bool $showRowColHeaders = true;
+    private $showRowColHeaders = true;
 
     /**
      * Show summary below? (Row/Column outline).
+      * @var bool
      */
-    private bool $showSummaryBelow = true;
+    private $showSummaryBelow = true;
 
     /**
      * Show summary right? (Row/Column outline).
+      * @var bool
      */
-    private bool $showSummaryRight = true;
+    private $showSummaryRight = true;
 
     /**
      * Collection of comments.
      *
      * @var Comment[]
      */
-    private array $comments = [];
+    private $comments = [];
 
     /**
      * Active cell. (Only one!).
+      * @var string
      */
-    private string $activeCell = 'A1';
+    private $activeCell = 'A1';
 
     /**
      * Selected cells.
+      * @var string
      */
-    private string $selectedCells = 'A1';
+    private $selectedCells = 'A1';
 
     /**
      * Cached highest column.
+      * @var int
      */
-    private int $cachedHighestColumn = 1;
+    private $cachedHighestColumn = 1;
 
     /**
      * Cached highest row.
+      * @var int
      */
-    private int $cachedHighestRow = 1;
+    private $cachedHighestRow = 1;
 
     /**
      * Right-to-left?
+      * @var bool
      */
-    private bool $rightToLeft = false;
+    private $rightToLeft = false;
 
     /**
      * Hyperlinks. Indexed by cell coordinate, e.g. 'A1'.
      *
      * @var Hyperlink[]
      */
-    private array $hyperlinkCollection = [];
+    private $hyperlinkCollection = [];
 
     /**
      * Data validation objects. Indexed by cell coordinate, e.g. 'A1'.
@@ -299,22 +328,25 @@ class Worksheet
      *
      * @var DataValidation[]
      */
-    private array $dataValidationCollection = [];
+    private $dataValidationCollection = [];
 
     /**
      * Tab color.
+      * @var ?Color
      */
-    private ?Color $tabColor = null;
+    private $tabColor = null;
 
     /**
      * Hash.
+      * @var int
      */
-    private int $hash;
+    private $hash;
 
     /**
      * CodeName.
+      * @var ?string
      */
-    private ?string $codeName = null;
+    private $codeName = null;
 
     /**
      * Create a new worksheet.
@@ -3863,11 +3895,14 @@ class Worksheet
         return $xfIndex;
     }
 
-    private string $backgroundImage = '';
+    /** @var string */
+    private $backgroundImage = '';
 
-    private string $backgroundMime = '';
+    /** @var string */
+    private $backgroundMime = '';
 
-    private string $backgroundExtension = '';
+    /** @var string */
+    private $backgroundExtension = '';
 
     public function getBackgroundImage(): string
     {

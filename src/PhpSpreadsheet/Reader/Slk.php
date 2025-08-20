@@ -16,32 +16,35 @@ class Slk extends BaseReader
 {
     /**
      * Sheet index to read.
+      * @var int
      */
-    private int $sheetIndex = 0;
+    private $sheetIndex = 0;
 
     /**
      * Formats.
      *
      * @var mixed[]
      */
-    private array $formats = [];
+    private $formats = [];
 
     /**
      * Format Count.
+      * @var int
      */
-    private int $format = 0;
+    private $format = 0;
 
     /**
      * Fonts.
      *
      * @var mixed[]
      */
-    private array $fonts = [];
+    private $fonts = [];
 
     /**
      * Font Count.
+      * @var int
      */
-    private int $fontcount = 0;
+    private $fontcount = 0;
 
     /**
      * Create a new SYLK Reader instance.

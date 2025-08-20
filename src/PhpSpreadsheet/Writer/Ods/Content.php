@@ -21,7 +21,8 @@ use PhpOffice\PhpSpreadsheet\Writer\Ods\Cell\Style;
  */
 class Content extends WriterPart
 {
-    private Formula $formulaConvertor;
+    /** @var Formula */
+    private $formulaConvertor;
 
     /**
      * Set parent Ods writer.

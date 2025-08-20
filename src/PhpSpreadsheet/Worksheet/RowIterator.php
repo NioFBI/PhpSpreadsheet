@@ -12,23 +12,27 @@ class RowIterator implements NativeIterator
 {
     /**
      * Worksheet to iterate.
+      * @var Worksheet
      */
-    private Worksheet $subject;
+    private $subject;
 
     /**
      * Current iterator position.
+      * @var int
      */
-    private int $position = 1;
+    private $position = 1;
 
     /**
      * Start position.
+      * @var int
      */
-    private int $startRow = 1;
+    private $startRow = 1;
 
     /**
      * End position.
+      * @var int
      */
-    private int $endRow = 1;
+    private $endRow = 1;
 
     /**
      * Create a new row iterator.

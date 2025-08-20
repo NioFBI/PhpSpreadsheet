@@ -15,8 +15,9 @@ class CalculationLocale extends CalculationBase
 
     /**
      * The current locale setting.
+      * @var string
      */
-    protected static string $localeLanguage = 'en_us'; //    US English    (default locale)
+    protected static $localeLanguage = 'en_us'; //    US English    (default locale)
 
     /**
      * List of available locale settings
@@ -24,31 +25,32 @@ class CalculationLocale extends CalculationBase
      *
      * @var string[]
      */
-    protected static array $validLocaleLanguages = [
+    protected static $validLocaleLanguages = [
         'en', //    English        (default language)
     ];
 
     /**
      * Locale-specific argument separator for function arguments.
+      * @var string
      */
-    protected static string $localeArgumentSeparator = ',';
+    protected static $localeArgumentSeparator = ',';
 
     /** @var string[] */
-    protected static array $localeFunctions = [];
+    protected static $localeFunctions = [];
 
     /**
      * Locale-specific translations for Excel constants (True, False and Null).
      *
      * @var array<string, string>
      */
-    protected static array $localeBoolean = [
+    protected static $localeBoolean = [
         'TRUE' => 'TRUE',
         'FALSE' => 'FALSE',
         'NULL' => 'NULL',
     ];
 
     /** @var array<int, array<int, string>> */
-    protected static array $falseTrueArray = [];
+    protected static $falseTrueArray = [];
 
     public static function getLocaleBoolean(string $index): string
     {
@@ -337,10 +339,10 @@ class CalculationLocale extends CalculationBase
     }
 
     /** @var null|string[] */
-    private static ?array $functionReplaceFromExcel;
+    private static $functionReplaceFromExcel;
 
     /** @var null|string[] */
-    private static ?array $functionReplaceToLocale;
+    private static $functionReplaceToLocale;
 
     public function translateFormulaToLocale(string $formula): string
     {
@@ -376,10 +378,10 @@ class CalculationLocale extends CalculationBase
     }
 
     /** @var null|string[] */
-    protected static ?array $functionReplaceFromLocale;
+    protected static $functionReplaceFromLocale;
 
     /** @var null|string[] */
-    protected static ?array $functionReplaceToExcel;
+    protected static $functionReplaceToExcel;
 
     public function translateFormulaToEnglish(string $formula): string
     {

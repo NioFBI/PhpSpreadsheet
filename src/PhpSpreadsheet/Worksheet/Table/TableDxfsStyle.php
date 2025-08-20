@@ -9,38 +9,45 @@ class TableDxfsStyle
 {
     /**
      * Header row dxfs index.
+      * @var ?int
      */
-    private ?int $headerRow = null;
+    private $headerRow = null;
 
     /**
      * First row stripe dxfs index.
+      * @var ?int
      */
-    private ?int $firstRowStripe = null;
+    private $firstRowStripe = null;
 
     /**
      * second row stripe dxfs index.
+      * @var ?int
      */
-    private ?int $secondRowStripe = null;
+    private $secondRowStripe = null;
 
     /**
      * Header row Style.
+      * @var ?Style
      */
-    private ?Style $headerRowStyle = null;
+    private $headerRowStyle = null;
 
     /**
      * First row stripe Style.
+      * @var ?Style
      */
-    private ?Style $firstRowStripeStyle = null;
+    private $firstRowStripeStyle = null;
 
     /**
      * Second row stripe Style.
+      * @var ?Style
      */
-    private ?Style $secondRowStripeStyle = null;
+    private $secondRowStripeStyle = null;
 
     /**
      * Name of the style.
+      * @var string
      */
-    private string $name;
+    private $name;
 
     /**
      * Create a new Table Style.

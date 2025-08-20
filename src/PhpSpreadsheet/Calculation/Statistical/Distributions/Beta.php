@@ -180,11 +180,14 @@ class Beta
 
     // Function cache for logBeta function
 
-    private static float $logBetaCacheP = 0.0;
+    /** @var float */
+    private static $logBetaCacheP = 0.0;
 
-    private static float $logBetaCacheQ = 0.0;
+    /** @var float */
+    private static $logBetaCacheQ = 0.0;
 
-    private static float $logBetaCacheResult = 0.0;
+    /** @var float */
+    private static $logBetaCacheResult = 0.0;
 
     /**
      * The natural logarithm of the beta function.

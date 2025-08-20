@@ -9,15 +9,17 @@ class ConditionalFormattingRuleExtension
 {
     const CONDITION_EXTENSION_DATABAR = 'dataBar';
 
-    private string $id;
+    /** @var string */
+    private $id;
 
     /** @var string Conditional Formatting Rule */
-    private string $cfRule;
+    private $cfRule;
 
-    private ConditionalDataBarExtension $dataBar;
+    /** @var ConditionalDataBarExtension */
+    private $dataBar;
 
     /** @var string Sequence of References */
-    private string $sqref = '';
+    private $sqref = '';
 
     /**
      * ConditionalFormattingRuleExtension constructor.

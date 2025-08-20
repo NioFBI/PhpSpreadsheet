@@ -7,8 +7,9 @@ class ExponentialBestFit extends BestFit
     /**
      * Algorithm type to use for best-fit
      * (Name of this Trend class).
+      * @var string
      */
-    protected string $bestFitType = 'exponential';
+    protected $bestFitType = 'exponential';
 
     /**
      * Return the Y-Value for a specified value of X.

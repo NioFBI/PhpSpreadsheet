@@ -76,42 +76,52 @@ class Conditional implements IComparable
 
     /**
      * Condition type.
+      * @var string
      */
-    private string $conditionType = self::CONDITION_NONE;
+    private $conditionType = self::CONDITION_NONE;
 
     /**
      * Operator type.
+      * @var string
      */
-    private string $operatorType = self::OPERATOR_NONE;
+    private $operatorType = self::OPERATOR_NONE;
 
     /**
      * Text.
+      * @var string
      */
-    private string $text = '';
+    private $text = '';
 
     /**
      * Stop on this condition, if it matches.
+      * @var bool
      */
-    private bool $stopIfTrue = false;
+    private $stopIfTrue = false;
 
     /**
      * Condition.
      *
      * @var (bool|float|int|string)[]
      */
-    private array $condition = [];
+    private $condition = [];
 
-    private ?ConditionalDataBar $dataBar = null;
+    /** @var ?ConditionalDataBar */
+    private $dataBar = null;
 
-    private ?ConditionalColorScale $colorScale = null;
+    /** @var ?ConditionalColorScale */
+    private $colorScale = null;
 
-    private ?ConditionalIconSet $iconSet = null;
+    /** @var ?ConditionalIconSet */
+    private $iconSet = null;
 
-    private Style $style;
+    /** @var Style */
+    private $style;
 
-    private bool $noFormatSet = false;
+    /** @var bool */
+    private $noFormatSet = false;
 
-    private int $priority = 0;
+    /** @var int */
+    private $priority = 0;
 
     /**
      * Create a new Conditional.

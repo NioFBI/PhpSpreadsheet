@@ -7,30 +7,41 @@ use PhpOffice\PhpSpreadsheet\Style\Color;
 
 class ConditionalColorScale
 {
-    private ?ConditionalFormatValueObject $minimumConditionalFormatValueObject = null;
+    /** @var ?ConditionalFormatValueObject */
+    private $minimumConditionalFormatValueObject = null;
 
-    private ?ConditionalFormatValueObject $midpointConditionalFormatValueObject = null;
+    /** @var ?ConditionalFormatValueObject */
+    private $midpointConditionalFormatValueObject = null;
 
-    private ?ConditionalFormatValueObject $maximumConditionalFormatValueObject = null;
+    /** @var ?ConditionalFormatValueObject */
+    private $maximumConditionalFormatValueObject = null;
 
-    private ?Color $minimumColor = null;
+    /** @var ?Color */
+    private $minimumColor = null;
 
-    private ?Color $midpointColor = null;
+    /** @var ?Color */
+    private $midpointColor = null;
 
-    private ?Color $maximumColor = null;
+    /** @var ?Color */
+    private $maximumColor = null;
 
-    private ?string $sqref = null;
+    /** @var ?string */
+    private $sqref = null;
 
     /** @var mixed[] */
-    private array $valueArray = [];
+    private $valueArray = [];
 
-    private float $minValue = 0;
+    /** @var float */
+    private $minValue = 0;
 
-    private float $maxValue = 0;
+    /** @var float */
+    private $maxValue = 0;
 
-    private float $midValue = 0;
+    /** @var float */
+    private $midValue = 0;
 
-    private ?\PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $worksheet = null;
+    /** @var ?\PhpOffice\PhpSpreadsheet\Worksheet\Worksheet */
+    private $worksheet = null;
 
     public function getMinimumConditionalFormatValueObject(): ?ConditionalFormatValueObject
     {

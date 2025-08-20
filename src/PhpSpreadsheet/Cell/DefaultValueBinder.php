@@ -121,7 +121,8 @@ class DefaultValueBinder implements IValueBinder
         return DataType::TYPE_STRING;
     }
 
-    protected bool $preserveCr = false;
+    /** @var bool */
+    protected $preserveCr = false;
 
     public function getPreserveCr(): bool
     {

@@ -10,15 +10,20 @@ use Stringable;
 
 class StringValueBinder extends DefaultValueBinder implements IValueBinder
 {
-    protected bool $convertNull = true;
+    /** @var bool */
+    protected $convertNull = true;
 
-    protected bool $convertBoolean = true;
+    /** @var bool */
+    protected $convertBoolean = true;
 
-    protected bool $convertNumeric = true;
+    /** @var bool */
+    protected $convertNumeric = true;
 
-    protected bool $convertFormula = true;
+    /** @var bool */
+    protected $convertFormula = true;
 
-    protected bool $setIgnoredErrors = false;
+    /** @var bool */
+    protected $setIgnoredErrors = false;
 
     public function setSetIgnoredErrors(bool $setIgnoredErrors = false): self
     {

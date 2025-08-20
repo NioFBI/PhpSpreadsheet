@@ -9,120 +9,150 @@ class Chart
 {
     /**
      * Chart Name.
+      * @var string
      */
-    private string $name;
+    private $name;
 
     /**
      * Worksheet.
+      * @var ?Worksheet
      */
-    private ?Worksheet $worksheet = null;
+    private $worksheet = null;
 
     /**
      * Chart Title.
+      * @var ?Title
      */
-    private ?Title $title;
+    private $title;
 
     /**
      * Chart Legend.
+      * @var ?Legend
      */
-    private ?Legend $legend;
+    private $legend;
 
     /**
      * X-Axis Label.
+      * @var ?Title
      */
-    private ?Title $xAxisLabel;
+    private $xAxisLabel;
 
     /**
      * Y-Axis Label.
+      * @var ?Title
      */
-    private ?Title $yAxisLabel;
+    private $yAxisLabel;
 
     /**
      * Chart Plot Area.
+      * @var ?PlotArea
      */
-    private ?PlotArea $plotArea;
+    private $plotArea;
 
     /**
      * Plot Visible Only.
+      * @var bool
      */
-    private bool $plotVisibleOnly;
+    private $plotVisibleOnly;
 
     /**
      * Display Blanks as.
+      * @var string
      */
-    private string $displayBlanksAs;
+    private $displayBlanksAs;
 
     /**
      * Chart Asix Y as.
+      * @var Axis
      */
-    private Axis $yAxis;
+    private $yAxis;
 
     /**
      * Chart Asix X as.
+      * @var Axis
      */
-    private Axis $xAxis;
+    private $xAxis;
 
     /**
      * Top-Left Cell Position.
+      * @var string
      */
-    private string $topLeftCellRef = 'A1';
+    private $topLeftCellRef = 'A1';
 
     /**
      * Top-Left X-Offset.
+      * @var int
      */
-    private int $topLeftXOffset = 0;
+    private $topLeftXOffset = 0;
 
     /**
      * Top-Left Y-Offset.
+      * @var int
      */
-    private int $topLeftYOffset = 0;
+    private $topLeftYOffset = 0;
 
     /**
      * Bottom-Right Cell Position.
+      * @var string
      */
-    private string $bottomRightCellRef = '';
+    private $bottomRightCellRef = '';
 
     /**
      * Bottom-Right X-Offset.
+      * @var int
      */
-    private int $bottomRightXOffset = 10;
+    private $bottomRightXOffset = 10;
 
     /**
      * Bottom-Right Y-Offset.
+      * @var int
      */
-    private int $bottomRightYOffset = 10;
+    private $bottomRightYOffset = 10;
 
-    private ?int $rotX = null;
+    /** @var ?int */
+    private $rotX = null;
 
-    private ?int $rotY = null;
+    /** @var ?int */
+    private $rotY = null;
 
-    private ?int $rAngAx = null;
+    /** @var ?int */
+    private $rAngAx = null;
 
-    private ?int $perspective = null;
+    /** @var ?int */
+    private $perspective = null;
 
-    private bool $oneCellAnchor = false;
+    /** @var bool */
+    private $oneCellAnchor = false;
 
-    private bool $autoTitleDeleted = false;
+    /** @var bool */
+    private $autoTitleDeleted = false;
 
-    private bool $noFill = false;
+    /** @var bool */
+    private $noFill = false;
 
-    private bool $noBorder = false;
+    /** @var bool */
+    private $noBorder = false;
 
-    private bool $roundedCorners = false;
+    /** @var bool */
+    private $roundedCorners = false;
 
-    private GridLines $borderLines;
+    /** @var GridLines */
+    private $borderLines;
 
-    private ChartColor $fillColor;
+    /** @var ChartColor */
+    private $fillColor;
 
     /**
      * Rendered width in pixels.
+      * @var ?float
      */
-    private ?float $renderedWidth = null;
+    private $renderedWidth = null;
 
     /**
      * Rendered height in pixels.
+      * @var ?float
      */
-    private ?float $renderedHeight = null;
+    private $renderedHeight = null;
 
     /**
      * Create a new Chart.

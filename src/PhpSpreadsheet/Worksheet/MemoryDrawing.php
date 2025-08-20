@@ -28,25 +28,28 @@ class MemoryDrawing extends BaseDrawing
 
     /**
      * Image resource.
+      * @var null|GdImage
      */
-    private null|GdImage $imageResource = null;
+    private $imageResource = null;
 
     /**
      * Rendering function.
      *
      * @var callable-string
      */
-    private string $renderingFunction;
+    private $renderingFunction;
 
     /**
      * Mime type.
+      * @var string
      */
-    private string $mimeType;
+    private $mimeType;
 
     /**
      * Unique name.
+      * @var string
      */
-    private string $uniqueName;
+    private $uniqueName;
 
     /**
      * Create a new MemoryDrawing.

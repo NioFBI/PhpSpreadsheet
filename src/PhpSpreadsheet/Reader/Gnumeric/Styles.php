@@ -14,12 +14,14 @@ use SimpleXMLElement;
 
 class Styles
 {
-    private Spreadsheet $spreadsheet;
+    /** @var Spreadsheet */
+    private $spreadsheet;
 
-    protected bool $readDataOnly;
+    /** @var bool */
+    protected $readDataOnly;
 
     /** @var array<string, string[]> */
-    public static array $mappings = [
+    public static $mappings = [
         'borderStyle' => [
             '0' => Border::BORDER_NONE,
             '1' => Border::BORDER_THIN,

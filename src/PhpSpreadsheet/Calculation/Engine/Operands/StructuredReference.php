@@ -31,24 +31,32 @@ final class StructuredReference implements Operand, Stringable
 
     private const TABLE_REFERENCE = '/([\p{L}_\\\][\p{L}\p{N}\._]+)?(\[(?:[^\]\[]+|(?R))*+\])/miu';
 
-    private string $value;
+    /** @var string */
+    private $value;
 
-    private string $tableName;
+    /** @var string */
+    private $tableName;
 
-    private Table $table;
+    /** @var Table */
+    private $table;
 
-    private string $reference;
+    /** @var string */
+    private $reference;
 
-    private ?int $headersRow;
+    /** @var ?int */
+    private $headersRow;
 
-    private int $firstDataRow;
+    /** @var int */
+    private $firstDataRow;
 
-    private int $lastDataRow;
+    /** @var int */
+    private $lastDataRow;
 
-    private ?int $totalsRow;
+    /** @var ?int */
+    private $totalsRow;
 
     /** @var mixed[] */
-    private array $columns;
+    private $columns;
 
     public function __construct(string $structuredReference)
     {

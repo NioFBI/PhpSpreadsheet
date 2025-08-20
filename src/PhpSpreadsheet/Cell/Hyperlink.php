@@ -6,13 +6,15 @@ class Hyperlink
 {
     /**
      * URL to link the cell to.
+      * @var string
      */
-    private string $url;
+    private $url;
 
     /**
      * Tooltip to display on the hyperlink.
+      * @var string
      */
-    private string $tooltip;
+    private $tooltip;
 
     /**
      * Create a new Hyperlink.
