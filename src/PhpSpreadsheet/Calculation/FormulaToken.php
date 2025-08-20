@@ -54,18 +54,21 @@ class FormulaToken
 
     /**
      * Value.
+      * @var string
      */
-    private string $value;
+    private $value;
 
     /**
      * Token Type (represented by TOKEN_TYPE_*).
+      * @var string
      */
-    private string $tokenType;
+    private $tokenType;
 
     /**
      * Token SubType (represented by TOKEN_SUBTYPE_*).
+      * @var string
      */
-    private string $tokenSubType;
+    private $tokenSubType;
 
     /**
      * Create a new FormulaToken.

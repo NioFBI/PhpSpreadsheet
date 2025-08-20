@@ -171,13 +171,15 @@ class Rule
     //    const AUTOFILTER_COLUMN_RULE_AFTER                = 'greaterThan';
     /**
      * Autofilter Column.
+      * @var ?Column
      */
-    private ?Column $parent;
+    private $parent;
 
     /**
      * Autofilter Rule Type.
+      * @var string
      */
-    private string $ruleType = self::AUTOFILTER_RULETYPE_FILTER;
+    private $ruleType = self::AUTOFILTER_RULETYPE_FILTER;
 
     /**
      * Autofilter Rule Value.
@@ -188,13 +190,15 @@ class Rule
 
     /**
      * Autofilter Rule Operator.
+      * @var string
      */
-    private string $operator = self::AUTOFILTER_COLUMN_RULE_EQUAL;
+    private $operator = self::AUTOFILTER_COLUMN_RULE_EQUAL;
 
     /**
      * DateTimeGrouping Group Value.
+      * @var string
      */
-    private string $grouping = '';
+    private $grouping = '';
 
     /**
      * Create a new Rule.

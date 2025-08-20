@@ -7,12 +7,12 @@ class DateTime extends DateTimeWizard
     /**
      * @var string[]
      */
-    protected array $separators;
+    protected $separators;
 
     /**
      * @var array<DateTimeWizard|string>
      */
-    protected array $formatBlocks;
+    protected $formatBlocks;
 
     /**
      * @param null|string|string[] $separators

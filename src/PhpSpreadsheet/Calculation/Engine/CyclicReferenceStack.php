@@ -9,7 +9,7 @@ class CyclicReferenceStack
      *
      * @var mixed[]
      */
-    private array $stack = [];
+    private $stack = [];
 
     /**
      * Return the number of entries on the stack.

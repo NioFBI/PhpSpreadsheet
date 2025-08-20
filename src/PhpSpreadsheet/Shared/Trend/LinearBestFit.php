@@ -7,8 +7,9 @@ class LinearBestFit extends BestFit
     /**
      * Algorithm type to use for best-fit
      * (Name of this Trend class).
+      * @var string
      */
-    protected string $bestFitType = 'linear';
+    protected $bestFitType = 'linear';
 
     /**
      * Return the Y-Value for a specified value of X.

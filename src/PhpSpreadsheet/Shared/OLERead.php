@@ -6,7 +6,8 @@ use PhpOffice\PhpSpreadsheet\Reader\Exception as ReaderException;
 
 class OLERead
 {
-    private string $data = '';
+    /** @var string */
+    private $data = '';
 
     // Size of a sector = 512 bytes
     const BIG_BLOCK_SIZE = 0x200;
@@ -34,32 +35,44 @@ class OLERead
     const START_BLOCK_POS = 0x74;
     const SIZE_POS = 0x78;
 
-    public ?int $wrkbook = null;
+    /** @var ?int */
+    public $wrkbook = null;
 
-    public ?int $summaryInformation = null;
+    /** @var ?int */
+    public $summaryInformation = null;
 
-    public ?int $documentSummaryInformation = null;
+    /** @var ?int */
+    public $documentSummaryInformation = null;
 
-    private int $numBigBlockDepotBlocks;
+    /** @var int */
+    private $numBigBlockDepotBlocks;
 
-    private int $rootStartBlock;
+    /** @var int */
+    private $rootStartBlock;
 
-    private int $sbdStartBlock;
+    /** @var int */
+    private $sbdStartBlock;
 
-    private int $extensionBlock;
+    /** @var int */
+    private $extensionBlock;
 
-    private int $numExtensionBlocks;
+    /** @var int */
+    private $numExtensionBlocks;
 
-    private string $bigBlockChain;
+    /** @var string */
+    private $bigBlockChain;
 
-    private string $smallBlockChain;
+    /** @var string */
+    private $smallBlockChain;
 
-    private string $entry;
+    /** @var string */
+    private $entry;
 
-    private int $rootentry;
+    /** @var int */
+    private $rootentry;
 
     /** @var mixed[][] */
-    private array $props = [];
+    private $props = [];
 
     /**
      * Read the file.

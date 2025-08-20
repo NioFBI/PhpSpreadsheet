@@ -20,18 +20,21 @@ class BSE
     /**
      * The parent BLIP Store Entry Container.
      * Property is currently unused.
+      * @var BstoreContainer
      */
-    private BstoreContainer $parent;
+    private $parent;
 
     /**
      * The BLIP (Big Large Image or Picture).
+      * @var ?BSE\Blip
      */
-    private ?BSE\Blip $blip = null;
+    private $blip = null;
 
     /**
      * The BLIP type.
+      * @var int
      */
-    private int $blipType;
+    private $blipType;
 
     /**
      * Set parent BLIP Store Entry Container.

@@ -19,44 +19,52 @@ class DataSeriesValues extends Properties
 
     /**
      * Series Data Type.
+      * @var string
      */
-    private string $dataType;
+    private $dataType;
 
     /**
      * Series Data Source.
+      * @var ?string
      */
-    private ?string $dataSource;
+    private $dataSource;
 
     /**
      * Format Code.
+      * @var ?string
      */
-    private ?string $formatCode;
+    private $formatCode;
 
     /**
      * Series Point Marker.
+      * @var ?string
      */
-    private ?string $pointMarker;
+    private $pointMarker;
 
-    private ChartColor $markerFillColor;
+    /** @var ChartColor */
+    private $markerFillColor;
 
-    private ChartColor $markerBorderColor;
+    /** @var ChartColor */
+    private $markerBorderColor;
 
     /**
      * Series Point Size.
+      * @var int
      */
-    private int $pointSize = 3;
+    private $pointSize = 3;
 
     /**
      * Point Count (The number of datapoints in the dataseries).
+      * @var int
      */
-    private int $pointCount;
+    private $pointCount;
 
     /**
      * Data Values.
      *
      * @var null|mixed[]
      */
-    private ?array $dataValues;
+    private $dataValues;
 
     /**
      * Fill color (can be array with colors if dataseries have custom colors).
@@ -65,14 +73,17 @@ class DataSeriesValues extends Properties
      */
     private $fillColor;
 
-    private bool $scatterLines = true;
+    /** @var bool */
+    private $scatterLines = true;
 
-    private bool $bubble3D = false;
+    /** @var bool */
+    private $bubble3D = false;
 
-    private ?Layout $labelLayout = null;
+    /** @var ?Layout */
+    private $labelLayout = null;
 
     /** @var TrendLine[] */
-    private array $trendLines = [];
+    private $trendLines = [];
 
     /**
      * Create a new DataSeriesValues object.
@@ -509,8 +520,9 @@ class DataSeriesValues extends Properties
 
     /**
      * Smooth Line. Must be specified for both DataSeries and DataSeriesValues.
+      * @var bool
      */
-    private bool $smoothLine = false;
+    private $smoothLine = false;
 
     /**
      * Get Smooth Line.

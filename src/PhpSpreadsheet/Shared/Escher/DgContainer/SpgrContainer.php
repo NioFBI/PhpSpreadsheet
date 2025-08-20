@@ -6,15 +6,16 @@ class SpgrContainer
 {
     /**
      * Parent Shape Group Container.
+      * @var ?self
      */
-    private ?self $parent = null;
+    private $parent = null;
 
     /**
      * Shape Container collection.
      *
      * @var mixed[]
      */
-    private array $children = [];
+    private $children = [];
 
     /**
      * Set parent Shape Group Container.

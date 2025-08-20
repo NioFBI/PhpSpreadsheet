@@ -20,22 +20,25 @@ class AutoFilter implements Stringable
 {
     /**
      * Autofilter Worksheet.
+      * @var ?Worksheet
      */
-    private ?Worksheet $workSheet;
+    private $workSheet;
 
     /**
      * Autofilter Range.
+      * @var string
      */
-    private string $range;
+    private $range;
 
     /**
      * Autofilter Column Ruleset.
      *
      * @var AutoFilter\Column[]
      */
-    private array $columns = [];
+    private $columns = [];
 
-    private bool $evaluated = false;
+    /** @var bool */
+    private $evaluated = false;
 
     public function getEvaluated(): bool
     {

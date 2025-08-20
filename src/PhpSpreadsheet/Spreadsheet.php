@@ -31,87 +31,97 @@ class Spreadsheet implements JsonSerializable
         self::VISIBILITY_VERY_HIDDEN,
     ];
 
-    protected int $excelCalendar = Date::CALENDAR_WINDOWS_1900;
+    /** @var int */
+    protected $excelCalendar = Date::CALENDAR_WINDOWS_1900;
 
     /**
      * Unique ID.
+      * @var string
      */
-    private string $uniqueID;
+    private $uniqueID;
 
     /**
      * Document properties.
+      * @var Properties
      */
-    private Properties $properties;
+    private $properties;
 
     /**
      * Document security.
+      * @var Security
      */
-    private Security $security;
+    private $security;
 
     /**
      * Collection of Worksheet objects.
      *
      * @var Worksheet[]
      */
-    private array $workSheetCollection;
+    private $workSheetCollection;
 
     /**
      * Calculation Engine.
+      * @var Calculation
      */
-    private Calculation $calculationEngine;
+    private $calculationEngine;
 
     /**
      * Active sheet index.
+      * @var int
      */
-    private int $activeSheetIndex;
+    private $activeSheetIndex;
 
     /**
      * Named ranges.
      *
      * @var DefinedName[]
      */
-    private array $definedNames;
+    private $definedNames;
 
     /**
      * CellXf supervisor.
+      * @var Style
      */
-    private Style $cellXfSupervisor;
+    private $cellXfSupervisor;
 
     /**
      * CellXf collection.
      *
      * @var Style[]
      */
-    private array $cellXfCollection = [];
+    private $cellXfCollection = [];
 
     /**
      * CellStyleXf collection.
      *
      * @var Style[]
      */
-    private array $cellStyleXfCollection = [];
+    private $cellStyleXfCollection = [];
 
     /**
      * hasMacros : this workbook have macros ?
+      * @var bool
      */
-    private bool $hasMacros = false;
+    private $hasMacros = false;
 
     /**
      * macrosCode : all macros code as binary data (the vbaProject.bin file, this include form, code,  etc.), null if no macro.
+      * @var ?string
      */
-    private ?string $macrosCode = null;
+    private $macrosCode = null;
 
     /**
      * macrosCertificate : if macros are signed, contains binary data vbaProjectSignature.bin file, null if not signed.
+      * @var ?string
      */
-    private ?string $macrosCertificate = null;
+    private $macrosCertificate = null;
 
     /**
      * ribbonXMLData : null if workbook is'nt Excel 2007 or not contain a customized UI.
      *
      * @var null|array{target: string, data: string}
      */
-    private ?array $ribbonXMLData = null;
+    private $ribbonXMLData = null;
 
     /**
      * ribbonBinObjects : null if workbook is'nt Excel 2007 or not contain embedded objects (picture(s)) for Ribbon Elements
@@ -119,7 +129,7 @@ class Spreadsheet implements JsonSerializable
      *
      * @var null|mixed[]
      */
-    private ?array $ribbonBinObjects = null;
+    private $ribbonBinObjects = null;
 
     /**
      * List of unparsed loaded data for export to same format with better compatibility.
@@ -127,59 +137,69 @@ class Spreadsheet implements JsonSerializable
      *
      * @var array<array<array<array<string>|string>>>
      */
-    private array $unparsedLoadedData = [];
+    private $unparsedLoadedData = [];
 
     /**
      * Controls visibility of the horizonal scroll bar in the application.
+      * @var bool
      */
-    private bool $showHorizontalScroll = true;
+    private $showHorizontalScroll = true;
 
     /**
      * Controls visibility of the horizonal scroll bar in the application.
+      * @var bool
      */
-    private bool $showVerticalScroll = true;
+    private $showVerticalScroll = true;
 
     /**
      * Controls visibility of the sheet tabs in the application.
+      * @var bool
      */
-    private bool $showSheetTabs = true;
+    private $showSheetTabs = true;
 
     /**
      * Specifies a boolean value that indicates whether the workbook window
      * is minimized.
+      * @var bool
      */
-    private bool $minimized = false;
+    private $minimized = false;
 
     /**
      * Specifies a boolean value that indicates whether to group dates
      * when presenting the user with filtering optiomd in the user
      * interface.
+      * @var bool
      */
-    private bool $autoFilterDateGrouping = true;
+    private $autoFilterDateGrouping = true;
 
     /**
      * Specifies the index to the first sheet in the book view.
+      * @var int
      */
-    private int $firstSheetIndex = 0;
+    private $firstSheetIndex = 0;
 
     /**
      * Specifies the visible status of the workbook.
+      * @var string
      */
-    private string $visibility = self::VISIBILITY_VISIBLE;
+    private $visibility = self::VISIBILITY_VISIBLE;
 
     /**
      * Specifies the ratio between the workbook tabs bar and the horizontal
      * scroll bar.  TabRatio is assumed to be out of 1000 of the horizontal
      * window width.
+      * @var int
      */
-    private int $tabRatio = 600;
+    private $tabRatio = 600;
 
-    private Theme $theme;
+    /** @var Theme */
+    private $theme;
 
-    private ?IValueBinder $valueBinder = null;
+    /** @var ?IValueBinder */
+    private $valueBinder = null;
 
     /** @var array<string, int> */
-    private array $fontCharsets = [
+    private $fontCharsets = [
         'B Nazanin' => SharedFont::CHARSET_ANSI_ARABIC,
     ];
 

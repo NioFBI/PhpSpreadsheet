@@ -61,83 +61,92 @@ class Html extends BaseWriter
 
     /**
      * Spreadsheet object.
+      * @var Spreadsheet
      */
-    protected Spreadsheet $spreadsheet;
+    protected $spreadsheet;
 
     /**
      * Sheet index to write.
+      * @var ?int
      */
-    private ?int $sheetIndex = 0;
+    private $sheetIndex = 0;
 
     /**
      * Images root.
+      * @var string
      */
-    private string $imagesRoot = '';
+    private $imagesRoot = '';
 
     /**
      * embed images, or link to images.
+      * @var bool
      */
-    protected bool $embedImages = false;
+    protected $embedImages = false;
 
     /**
      * Use inline CSS?
+      * @var bool
      */
-    private bool $useInlineCss = false;
+    private $useInlineCss = false;
 
     /**
      * Array of CSS styles.
      *
      * @var string[][]
      */
-    private ?array $cssStyles = null;
+    private $cssStyles = null;
 
     /**
      * Array of column widths in points.
      *
      * @var array<array<float|int>>
      */
-    private array $columnWidths;
+    private $columnWidths;
 
     /**
      * Default font.
+      * @var Font
      */
-    private Font $defaultFont;
+    private $defaultFont;
 
     /**
      * Flag whether spans have been calculated.
+      * @var bool
      */
-    private bool $spansAreCalculated = false;
+    private $spansAreCalculated = false;
 
     /**
      * Excel cells that should not be written as HTML cells.
      *
      * @var mixed[][][][]
      */
-    private array $isSpannedCell = [];
+    private $isSpannedCell = [];
 
     /**
      * Excel cells that are upper-left corner in a cell merge.
      *
      * @var int[][][][]
      */
-    private array $isBaseCell = [];
+    private $isBaseCell = [];
 
     /**
      * Excel rows that should not be written as HTML rows.
      *
      * @var mixed[][]
      */
-    private array $isSpannedRow = [];
+    private $isSpannedRow = [];
 
     /**
      * Is the current writer creating PDF?
+      * @var bool
      */
-    protected bool $isPdf = false;
+    protected $isPdf = false;
 
     /**
      * Generate the Navigation block.
+      * @var bool
      */
-    private bool $generateSheetNavigationBlock = true;
+    private $generateSheetNavigationBlock = true;
 
     /**
      * Callback for editing generated html.
@@ -152,27 +161,34 @@ class Html extends BaseWriter
     /** @var Chart[] */
     private $sheetCharts;
 
-    private bool $betterBoolean = true;
+    /** @var bool */
+    private $betterBoolean = true;
 
-    private string $getTrue = 'TRUE';
+    /** @var string */
+    private $getTrue = 'TRUE';
 
-    private string $getFalse = 'FALSE';
+    /** @var string */
+    private $getFalse = 'FALSE';
 
-    protected bool $rtlSheets = false;
+    /** @var bool */
+    protected $rtlSheets = false;
 
-    protected bool $ltrSheets = false;
+    /** @var bool */
+    protected $ltrSheets = false;
 
     /**
      * Table formats
      * Enables table formats in writer, disabled here, must be enabled in writer via a setter.
+      * @var bool
      */
-    protected bool $tableFormats = false;
+    protected $tableFormats = false;
 
     /**
      * Conditional Formatting
      * Enables conditional formatting in writer, disabled here, must be enabled in writer via a setter.
+      * @var bool
      */
-    protected bool $conditionalFormatting = false;
+    protected $conditionalFormatting = false;
 
     /**
      * Create a new HTML.

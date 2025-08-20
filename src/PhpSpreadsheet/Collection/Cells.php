@@ -13,27 +13,32 @@ class Cells
 {
     protected const MAX_COLUMN_ID = 16384;
 
-    private CacheInterface $cache;
+    /** @var CacheInterface */
+    private $cache;
 
     /**
      * Parent worksheet.
+      * @var ?Worksheet
      */
-    private ?Worksheet $parent;
+    private $parent;
 
     /**
      * The currently active Cell.
+      * @var ?Cell
      */
-    private ?Cell $currentCell = null;
+    private $currentCell = null;
 
     /**
      * Coordinate of the currently active Cell.
+      * @var ?string
      */
-    private ?string $currentCoordinate = null;
+    private $currentCoordinate = null;
 
     /**
      * Flag indicating whether the currently active Cell requires saving.
+      * @var bool
      */
-    private bool $currentCellIsDirty = false;
+    private $currentCellIsDirty = false;
 
     /**
      * An index of existing cells. int pointer to the coordinate (0-base-indexed row * 16,384 + 1-base indexed column)
@@ -41,12 +46,13 @@ class Cells
      *
      * @var int[]
      */
-    private array $index = [];
+    private $index = [];
 
     /**
      * Prefix used to uniquely identify cache data for this worksheet.
+      * @var string
      */
-    private string $cachePrefix;
+    private $cachePrefix;
 
     /**
      * Initialise this new cell collection.

@@ -8,65 +8,76 @@ class SpContainer
 {
     /**
      * Parent Shape Group Container.
+      * @var SpgrContainer
      */
-    private SpgrContainer $parent;
+    private $parent;
 
     /**
      * Is this a group shape?
+      * @var bool
      */
-    private bool $spgr = false;
+    private $spgr = false;
 
     /**
      * Shape type.
+      * @var int
      */
-    private int $spType;
+    private $spType;
 
     /**
      * Shape flag.
+      * @var int
      */
-    private int $spFlag;
+    private $spFlag;
 
     /**
      * Shape index (usually group shape has index 0, and the rest: 1,2,3...).
+      * @var int
      */
-    private int $spId;
+    private $spId;
 
     /**
      * Array of options.
      *
      * @var mixed[]
      */
-    private array $OPT = [];
+    private $OPT = [];
 
     /**
      * Cell coordinates of upper-left corner of shape, e.g. 'A1'.
+      * @var string
      */
-    private string $startCoordinates = '';
+    private $startCoordinates = '';
 
     /**
      * Horizontal offset of upper-left corner of shape measured in 1/1024 of column width.
+      * @var int|float
      */
-    private int|float $startOffsetX;
+    private $startOffsetX;
 
     /**
      * Vertical offset of upper-left corner of shape measured in 1/256 of row height.
+      * @var int|float
      */
-    private int|float $startOffsetY;
+    private $startOffsetY;
 
     /**
      * Cell coordinates of bottom-right corner of shape, e.g. 'B2'.
+      * @var string
      */
-    private string $endCoordinates;
+    private $endCoordinates;
 
     /**
      * Horizontal offset of bottom-right corner of shape measured in 1/1024 of column width.
+      * @var int|float
      */
-    private int|float $endOffsetX;
+    private $endOffsetX;
 
     /**
      * Vertical offset of bottom-right corner of shape measured in 1/256 of row height.
+      * @var int|float
      */
-    private int|float $endOffsetY;
+    private $endOffsetY;
 
     /**
      * Set parent Shape Group Container.

@@ -20,7 +20,7 @@ class SimpleCache1 implements CacheInterface
     /**
      * @var array Cell Cache
      */
-    private array $cache = [];
+    private $cache = [];
 
     public function clear(): bool
     {

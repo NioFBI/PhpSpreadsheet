@@ -14,7 +14,7 @@ class ConditionalFormatting extends Xls
     /**
      * @var array<int, string>
      */
-    private static array $types = [
+    private static $types = [
         0x01 => Conditional::CONDITION_CELLIS,
         0x02 => Conditional::CONDITION_EXPRESSION,
     ];
@@ -22,7 +22,7 @@ class ConditionalFormatting extends Xls
     /**
      * @var array<int, string>
      */
-    private static array $operators = [
+    private static $operators = [
         0x00 => Conditional::OPERATOR_NONE,
         0x01 => Conditional::OPERATOR_BETWEEN,
         0x02 => Conditional::OPERATOR_NOTBETWEEN,

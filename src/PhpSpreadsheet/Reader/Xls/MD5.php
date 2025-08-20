@@ -6,15 +6,20 @@ use PhpOffice\PhpSpreadsheet\Reader\Exception as ReaderException;
 
 class MD5
 {
-    private int $a;
+    /** @var int */
+    private $a;
 
-    private int $b;
+    /** @var int */
+    private $b;
 
-    private int $c;
+    /** @var int */
+    private $c;
 
-    private int $d;
+    /** @var int */
+    private $d;
 
-    private static int $allOneBits;
+    /** @var int */
+    private static $allOneBits;
 
     /**
      * MD5 stream constructor.

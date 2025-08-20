@@ -8,19 +8,21 @@ use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
 
 class Stack
 {
-    private BranchPruner $branchPruner;
+    /** @var BranchPruner */
+    private $branchPruner;
 
     /**
      * The parser stack for formulae.
      *
      * @var array<int, array<mixed>>
      */
-    private array $stack = [];
+    private $stack = [];
 
     /**
      * Count of entries in the parser stack.
+      * @var int
      */
-    private int $count = 0;
+    private $count = 0;
 
     public function __construct(BranchPruner $branchPruner)
     {

@@ -48,9 +48,10 @@ class Dimension
      *                If this is a height, then size is measured in pixels ()
      *                   or in points () if $unit is null.
      */
-    protected float|int $size;
+    protected $size;
 
-    protected ?string $unit = null;
+    /** @var ?string */
+    protected $unit = null;
 
     public function __construct(string $dimension)
     {

@@ -15,21 +15,24 @@ abstract class BaseReader implements IReader
      * Read data only?
      * Identifies whether the Reader should only read data values for cells, and ignore any formatting information;
      *        or whether it should read both data and formatting.
+      * @var bool
      */
-    protected bool $readDataOnly = false;
+    protected $readDataOnly = false;
 
     /**
      * Read empty cells?
      * Identifies whether the Reader should read data values for all cells, or should ignore cells containing
      *         null value or empty string.
+      * @var bool
      */
-    protected bool $readEmptyCells = true;
+    protected $readEmptyCells = true;
 
     /**
      * Read charts that are defined in the workbook?
      * Identifies whether the Reader should read the definitions for any charts that exist in the workbook;.
+      * @var bool
      */
-    protected bool $includeCharts = false;
+    protected $includeCharts = false;
 
     /**
      * Restrict which sheets should be loaded?
@@ -38,33 +41,38 @@ abstract class BaseReader implements IReader
      *
      * @var null|string[]
      */
-    protected ?array $loadSheetsOnly = null;
+    protected $loadSheetsOnly = null;
 
     /**
      * Ignore rows with no cells?
      * Identifies whether the Reader should ignore rows with no cells.
      *        Currently implemented only for Xlsx.
+      * @var bool
      */
-    protected bool $ignoreRowsWithNoCells = false;
+    protected $ignoreRowsWithNoCells = false;
 
     /**
      * Allow external images. Use with caution.
      * Improper specification of these within a spreadsheet
      * can subject the caller to security exploits.
+      * @var bool
      */
-    protected bool $allowExternalImages = false;
+    protected $allowExternalImages = false;
 
     /**
      * IReadFilter instance.
+      * @var IReadFilter
      */
-    protected IReadFilter $readFilter;
+    protected $readFilter;
 
     /** @var resource */
     protected $fileHandle;
 
-    protected ?XmlScanner $securityScanner = null;
+    /** @var ?XmlScanner */
+    protected $securityScanner = null;
 
-    protected ?IValueBinder $valueBinder = null;
+    /** @var ?IValueBinder */
+    protected $valueBinder = null;
 
     public function __construct()
     {

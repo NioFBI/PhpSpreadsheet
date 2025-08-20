@@ -18,19 +18,22 @@ class Settings
      *
      * @var null|class-string<IRenderer>
      */
-    private static ?string $chartRenderer = null;
+    private static $chartRenderer = null;
 
     /**
      * The cache implementation to be used for cell collection.
+      * @var ?CacheInterface
      */
-    private static ?CacheInterface $cache = null;
+    private static $cache = null;
 
     /**
      * The HTTP client implementation to be used for network request.
+      * @var ?ClientInterface
      */
-    private static ?ClientInterface $httpClient = null;
+    private static $httpClient = null;
 
-    private static ?RequestFactoryInterface $requestFactory = null;
+    /** @var ?RequestFactoryInterface */
+    private static $requestFactory = null;
 
     /**
      * Set the locale code to use for formula translations and any special formatting.

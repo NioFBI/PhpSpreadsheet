@@ -18,22 +18,30 @@ class Ods extends BaseWriter
 {
     /**
      * Private PhpSpreadsheet.
+      * @var Spreadsheet
      */
-    private Spreadsheet $spreadSheet;
+    private $spreadSheet;
 
-    private Content $writerPartContent;
+    /** @var Content */
+    private $writerPartContent;
 
-    private Meta $writerPartMeta;
+    /** @var Meta */
+    private $writerPartMeta;
 
-    private MetaInf $writerPartMetaInf;
+    /** @var MetaInf */
+    private $writerPartMetaInf;
 
-    private Mimetype $writerPartMimetype;
+    /** @var Mimetype */
+    private $writerPartMimetype;
 
-    private Settings $writerPartSettings;
+    /** @var Settings */
+    private $writerPartSettings;
 
-    private Styles $writerPartStyles;
+    /** @var Styles */
+    private $writerPartStyles;
 
-    private Thumbnails $writerPartThumbnails;
+    /** @var Thumbnails */
+    private $writerPartThumbnails;
 
     /**
      * Create a new Ods.

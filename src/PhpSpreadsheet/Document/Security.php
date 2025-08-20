@@ -8,28 +8,33 @@ class Security
 {
     /**
      * LockRevision.
+      * @var bool
      */
-    private bool $lockRevision = false;
+    private $lockRevision = false;
 
     /**
      * LockStructure.
+      * @var bool
      */
-    private bool $lockStructure = false;
+    private $lockStructure = false;
 
     /**
      * LockWindows.
+      * @var bool
      */
-    private bool $lockWindows = false;
+    private $lockWindows = false;
 
     /**
      * RevisionsPassword.
+      * @var string
      */
-    private string $revisionsPassword = '';
+    private $revisionsPassword = '';
 
     /**
      * WorkbookPassword.
+      * @var string
      */
-    private string $workbookPassword = '';
+    private $workbookPassword = '';
 
     /**
      * Create a new Document Security instance.

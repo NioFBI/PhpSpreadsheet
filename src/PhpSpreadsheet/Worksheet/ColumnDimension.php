@@ -9,20 +9,23 @@ class ColumnDimension extends Dimension
 {
     /**
      * Column index.
+      * @var ?string
      */
-    private ?string $columnIndex;
+    private $columnIndex;
 
     /**
      * Column width.
      *
      * When this is set to a negative value, the column width should be ignored by IWriter
+      * @var float
      */
-    private float $width = -1;
+    private $width = -1;
 
     /**
      * Auto size?
+      * @var bool
      */
-    private bool $autoSize = false;
+    private $autoSize = false;
 
     /**
      * Create a new ColumnDimension.

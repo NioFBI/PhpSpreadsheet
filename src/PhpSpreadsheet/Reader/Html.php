@@ -40,13 +40,15 @@ class Html extends BaseReader
 
     /**
      * Input encoding.
+      * @var string
      */
-    protected string $inputEncoding = 'ANSI';
+    protected $inputEncoding = 'ANSI';
 
     /**
      * Sheet index to read.
+      * @var int
      */
-    protected int $sheetIndex = 0;
+    protected $sheetIndex = 0;
 
     /**
      * Formats.
@@ -129,7 +131,7 @@ class Html extends BaseReader
     ];
 
     /** @var array<string, bool> */
-    protected array $rowspan = [];
+    protected $rowspan = [];
 
     /**
      * Create a new HTML Reader instance.
@@ -225,12 +227,13 @@ class Html extends BaseReader
      *
      * @var mixed[][]
      */
-    protected array $dataArray = [];
+    protected $dataArray = [];
 
-    protected int $tableLevel = 0;
+    /** @var int */
+    protected $tableLevel = 0;
 
     /** @var string[] */
-    protected array $nestedColumn = ['A'];
+    protected $nestedColumn = ['A'];
 
     protected function setTableStartColumn(string $column): string
     {
@@ -310,7 +313,7 @@ class Html extends BaseReader
     }
 
     /** @var array<int, array<int, string>> */
-    private static array $falseTrueArray = [];
+    private static $falseTrueArray = [];
 
     private static function convertBoolean(?string $cellContent): bool|string
     {
@@ -521,7 +524,8 @@ class Html extends BaseReader
         }
     }
 
-    private string $currentColumn = 'A';
+    /** @var string */
+    private $currentColumn = 'A';
 
     /** @param string[] $attributeArray */
     private function processDomElementTable(Worksheet $sheet, int &$row, string &$column, string &$cellContent, DOMElement $child, array &$attributeArray): void

@@ -11,13 +11,17 @@ abstract class NumberBase implements Stringable
 {
     protected const MAX_DECIMALS = 30;
 
-    protected int $decimals = 2;
+    /** @var int */
+    protected $decimals = 2;
 
-    protected ?string $locale = null;
+    /** @var ?string */
+    protected $locale = null;
 
-    protected ?string $fullLocale = null;
+    /** @var ?string */
+    protected $fullLocale = null;
 
-    protected ?string $localeFormat = null;
+    /** @var ?string */
+    protected $localeFormat = null;
 
     public function setDecimals(int $decimals = 2): void
     {

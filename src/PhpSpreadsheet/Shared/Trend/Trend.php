@@ -33,7 +33,7 @@ class Trend
      *
      * @var string[]
      */
-    private static array $trendTypePolynomialOrders = [
+    private static $trendTypePolynomialOrders = [
         self::TREND_POLYNOMIAL_2,
         self::TREND_POLYNOMIAL_3,
         self::TREND_POLYNOMIAL_4,
@@ -46,7 +46,7 @@ class Trend
      *
      * @var BestFit[]
      */
-    private static array $trendCache = [];
+    private static $trendCache = [];
 
     /**
      * @param mixed[] $yValues

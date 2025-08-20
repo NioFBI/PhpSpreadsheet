@@ -19,78 +19,98 @@ class Font extends Supervisor
     const CAP_NONE = 'none';
     private const VALID_CAPS = [self::CAP_ALL, self::CAP_SMALL, self::CAP_NONE];
 
-    protected ?string $cap = null;
+    /** @var ?string */
+    protected $cap = null;
 
     public const DEFAULT_FONT_NAME = 'Calibri';
 
     /**
      * Font Name.
+      * @var ?string
      */
-    protected ?string $name = self::DEFAULT_FONT_NAME;
+    protected $name = self::DEFAULT_FONT_NAME;
 
     /**
      * The following 7 are used only for chart titles, I think.
+      * @var string
      */
-    private string $latin = '';
+    private $latin = '';
 
-    private string $eastAsian = '';
+    /** @var string */
+    private $eastAsian = '';
 
-    private string $complexScript = '';
+    /** @var string */
+    private $complexScript = '';
 
-    private int $baseLine = 0;
+    /** @var int */
+    private $baseLine = 0;
 
-    private string $strikeType = '';
+    /** @var string */
+    private $strikeType = '';
 
-    private ?ChartColor $underlineColor = null;
+    /** @var ?ChartColor */
+    private $underlineColor = null;
 
-    private ?ChartColor $chartColor = null;
+    /** @var ?ChartColor */
+    private $chartColor = null;
     // end of chart title items
 
     /**
      * Font Size.
+      * @var ?float
      */
-    protected ?float $size = 11;
+    protected $size = 11;
 
     /**
      * Bold.
+      * @var ?bool
      */
-    protected ?bool $bold = false;
+    protected $bold = false;
 
     /**
      * Italic.
+      * @var ?bool
      */
-    protected ?bool $italic = false;
+    protected $italic = false;
 
     /**
      * Superscript.
+      * @var ?bool
      */
-    protected ?bool $superscript = false;
+    protected $superscript = false;
 
     /**
      * Subscript.
+      * @var ?bool
      */
-    protected ?bool $subscript = false;
+    protected $subscript = false;
 
     /**
      * Underline.
+      * @var ?string
      */
-    protected ?string $underline = self::UNDERLINE_NONE;
+    protected $underline = self::UNDERLINE_NONE;
 
     /**
      * Strikethrough.
+      * @var ?bool
      */
-    protected ?bool $strikethrough = false;
+    protected $strikethrough = false;
 
     /**
      * Foreground color.
+      * @var Color
      */
-    protected Color $color;
+    protected $color;
 
-    protected bool $autoColor = false;
+    /** @var bool */
+    protected $autoColor = false;
 
-    public ?int $colorIndex = null;
+    /** @var ?int */
+    public $colorIndex = null;
 
-    protected string $scheme = '';
+    /** @var string */
+    protected $scheme = '';
 
     /**
      * Create a new Font.

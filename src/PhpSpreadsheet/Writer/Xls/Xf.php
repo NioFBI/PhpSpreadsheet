@@ -48,58 +48,70 @@ class Xf
 {
     /**
      * Style XF or a cell XF ?
+      * @var bool
      */
-    private bool $isStyleXf;
+    private $isStyleXf;
 
     /**
      * Index to the FONT record. Index 4 does not exist.
+      * @var int
      */
-    private int $fontIndex;
+    private $fontIndex;
 
     /**
      * An index (2 bytes) to a FORMAT record (number format).
+      * @var int
      */
-    private int $numberFormatIndex;
+    private $numberFormatIndex;
 
     /**
      * 1 bit, apparently not used.
+      * @var int
      */
-    private int $textJustLast;
+    private $textJustLast;
 
     /**
      * The cell's foreground color.
+      * @var int
      */
-    private int $foregroundColor;
+    private $foregroundColor;
 
     /**
      * The cell's background color.
+      * @var int
      */
-    private int $backgroundColor;
+    private $backgroundColor;
 
     /**
      * Color of the bottom border of the cell.
+      * @var int
      */
-    private int $bottomBorderColor;
+    private $bottomBorderColor;
 
     /**
      * Color of the top border of the cell.
+      * @var int
      */
-    private int $topBorderColor;
+    private $topBorderColor;
 
     /**
      * Color of the left border of the cell.
+      * @var int
      */
-    private int $leftBorderColor;
+    private $leftBorderColor;
 
     /**
      * Color of the right border of the cell.
+      * @var int
      */
-    private int $rightBorderColor;
+    private $rightBorderColor;
 
     //private $diag; // theoretically int, not yet implemented
-    private int $diagColor;
+    /** @var int */
+    private $diagColor;
 
-    private Style $style;
+    /** @var Style */
+    private $style;
 
     /**
      * Constructor.

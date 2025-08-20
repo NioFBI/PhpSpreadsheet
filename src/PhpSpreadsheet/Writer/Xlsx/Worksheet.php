@@ -24,19 +24,26 @@ use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet as PhpspreadsheetWorksheet;
 
 class Worksheet extends WriterPart
 {
-    private string $numberStoredAsText = '';
+    /** @var string */
+    private $numberStoredAsText = '';
 
-    private string $formula = '';
+    /** @var string */
+    private $formula = '';
 
-    private string $formulaRange = '';
+    /** @var string */
+    private $formulaRange = '';
 
-    private string $twoDigitTextYear = '';
+    /** @var string */
+    private $twoDigitTextYear = '';
 
-    private string $evalError = '';
+    /** @var string */
+    private $evalError = '';
 
-    private bool $explicitStyle0;
+    /** @var bool */
+    private $explicitStyle0;
 
-    private bool $useDynamicArrays = false;
+    /** @var bool */
+    private $useDynamicArrays = false;
 
     /**
      * Write worksheet to XML format.

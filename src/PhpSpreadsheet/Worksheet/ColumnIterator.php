@@ -14,23 +14,27 @@ class ColumnIterator implements NativeIterator
 {
     /**
      * Worksheet to iterate.
+      * @var Worksheet
      */
-    private Worksheet $worksheet;
+    private $worksheet;
 
     /**
      * Current iterator position.
+      * @var int
      */
-    private int $currentColumnIndex = 1;
+    private $currentColumnIndex = 1;
 
     /**
      * Start position.
+      * @var int
      */
-    private int $startColumnIndex = 1;
+    private $startColumnIndex = 1;
 
     /**
      * End position.
+      * @var int
      */
-    private int $endColumnIndex = 1;
+    private $endColumnIndex = 1;
 
     /**
      * Create a new column iterator.

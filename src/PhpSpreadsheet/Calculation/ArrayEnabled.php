@@ -7,9 +7,11 @@ use PhpOffice\PhpSpreadsheet\Calculation\Engine\ArrayArgumentProcessor;
 
 trait ArrayEnabled
 {
-    private static bool $initializationNeeded = true;
+    /** @var bool */
+    private static $initializationNeeded = true;
 
-    private static ArrayArgumentHelper $arrayArgumentHelper;
+    /** @var ArrayArgumentHelper */
+    private static $arrayArgumentHelper;
 
     /**
      * @param mixed[] $arguments

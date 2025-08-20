@@ -6,33 +6,39 @@ class PageMargins
 {
     /**
      * Left.
+      * @var float
      */
-    private float $left = 0.7;
+    private $left = 0.7;
 
     /**
      * Right.
+      * @var float
      */
-    private float $right = 0.7;
+    private $right = 0.7;
 
     /**
      * Top.
+      * @var float
      */
-    private float $top = 0.75;
+    private $top = 0.75;
 
     /**
      * Bottom.
+      * @var float
      */
-    private float $bottom = 0.75;
+    private $bottom = 0.75;
 
     /**
      * Header.
+      * @var float
      */
-    private float $header = 0.3;
+    private $header = 0.3;
 
     /**
      * Footer.
+      * @var float
      */
-    private float $footer = 0.3;
+    private $footer = 0.3;
 
     /**
      * Create a new PageMargins.

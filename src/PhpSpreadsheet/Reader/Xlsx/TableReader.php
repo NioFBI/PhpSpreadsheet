@@ -11,9 +11,11 @@ use SimpleXMLElement;
 
 class TableReader
 {
-    private Worksheet $worksheet;
+    /** @var Worksheet */
+    private $worksheet;
 
-    private SimpleXMLElement $tableXml;
+    /** @var SimpleXMLElement */
+    private $tableXml;
 
     /** @var mixed[]|SimpleXMLElement */
     private $tableAttributes;

@@ -4,18 +4,22 @@ namespace PhpOffice\PhpSpreadsheet\Style\ConditionalFormatting;
 
 class ConditionalFormatValueObject
 {
-    private string $type;
+    /** @var string */
+    private $type;
 
-    private null|float|int|string $value;
+    /** @var null|float|int|string */
+    private $value;
 
-    private ?string $cellFormula;
+    /** @var ?string */
+    private $cellFormula;
 
     /**
      * For icon sets, determines whether this threshold value uses the greater
      * than or equal to operator. False indicates 'greater than' is used instead
      * of 'greater than or equal to'.
+      * @var ?bool
      */
-    private ?bool $greaterThanOrEqual = null;
+    private $greaterThanOrEqual = null;
 
     public function __construct(string $type, null|float|int|string $value = null, ?string $cellFormula = null)
     {

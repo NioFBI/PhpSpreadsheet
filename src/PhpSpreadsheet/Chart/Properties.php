@@ -103,21 +103,25 @@ abstract class Properties
     const ANGLE_MULTIPLIER = 60000; // direction and size-kx size-ky
     const PERCENTAGE_MULTIPLIER = 100000; // size sx and sy
 
-    protected bool $objectState = false; // used only for minor gridlines
+    /** @var bool */
+    protected $objectState = false; // used only for minor gridlines
 
-    protected ?float $glowSize = null;
+    /** @var ?float */
+    protected $glowSize = null;
 
-    protected ChartColor $glowColor;
+    /** @var ChartColor */
+    protected $glowColor;
 
     /** @var array{size: ?float} */
-    protected array $softEdges = [
+    protected $softEdges = [
         'size' => null,
     ];
 
     /** @var mixed[] */
-    protected array $shadowProperties = self::PRESETS_OPTIONS[0];
+    protected $shadowProperties = self::PRESETS_OPTIONS[0];
 
-    protected ChartColor $shadowColor;
+    /** @var ChartColor */
+    protected $shadowColor;
 
     public function __construct()
     {
@@ -695,10 +699,11 @@ abstract class Properties
         return $array;
     }
 
-    protected ChartColor $lineColor;
+    /** @var ChartColor */
+    protected $lineColor;
 
     /** @var array{width: null|float|int|string, compound: ?string, dash: ?string, cap: ?string, join: ?string, arrow: array{head: array{type: ?string, size: null|int|string, w: ?string, len: ?string}, end: array{type: ?string, size: null|int|string, w: ?string, len: ?string}}} */
-    protected array $lineStyleProperties = [
+    protected $lineStyleProperties = [
         'width' => null, //'9525',
         'compound' => '', //self::LINE_STYLE_COMPOUND_SIMPLE,
         'dash' => '', //self::LINE_STYLE_DASH_SOLID,

@@ -82,12 +82,12 @@ class Date extends DateTimeWizard
     /**
      * @var string[]
      */
-    protected array $separators;
+    protected $separators;
 
     /**
      * @var string[]
      */
-    protected array $formatBlocks;
+    protected $formatBlocks;
 
     /**
      * @param null|string|string[] $separators

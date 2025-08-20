@@ -6,50 +6,57 @@ use PhpOffice\PhpSpreadsheet\Calculation\Exception;
 
 class BranchPruner
 {
-    protected bool $branchPruningEnabled;
+    /** @var bool */
+    protected $branchPruningEnabled;
 
     /**
      * Used to generate unique store keys.
+      * @var int
      */
-    private int $branchStoreKeyCounter = 0;
+    private $branchStoreKeyCounter = 0;
 
     /**
      * currently pending storeKey (last item of the storeKeysStack.
+      * @var ?string
      */
-    protected ?string $pendingStoreKey = null;
+    protected $pendingStoreKey = null;
 
     /**
      * @var string[]
      */
-    protected array $storeKeysStack = [];
+    protected $storeKeysStack = [];
 
     /**
      * @var bool[]
      */
-    protected array $conditionMap = [];
+    protected $conditionMap = [];
 
     /**
      * @var bool[]
      */
-    protected array $thenMap = [];
+    protected $thenMap = [];
 
     /**
      * @var bool[]
      */
-    protected array $elseMap = [];
+    protected $elseMap = [];
 
     /**
      * @var int[]
      */
-    protected array $braceDepthMap = [];
+    protected $braceDepthMap = [];
 
-    protected ?string $currentCondition = null;
+    /** @var ?string */
+    protected $currentCondition = null;
 
-    protected ?string $currentOnlyIf = null;
+    /** @var ?string */
+    protected $currentOnlyIf = null;
 
-    protected ?string $currentOnlyIfNot = null;
+    /** @var ?string */
+    protected $currentOnlyIfNot = null;
 
-    protected ?string $previousStoreKey = null;
+    /** @var ?string */
+    protected $previousStoreKey = null;
 
     public function __construct(bool $branchPruningEnabled)
     {

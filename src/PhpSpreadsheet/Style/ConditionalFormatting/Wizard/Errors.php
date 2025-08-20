@@ -22,7 +22,8 @@ class Errors extends WizardAbstract implements WizardInterface
         Wizard::ERRORS => 'ISERROR(%s)',
     ];
 
-    protected bool $inverse;
+    /** @var bool */
+    protected $inverse;
 
     public function __construct(string $cellRange, bool $inverse = false)
     {

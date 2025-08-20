@@ -33,72 +33,88 @@ class Csv extends BaseReader
 
     /**
      * Input encoding.
+      * @var string
      */
-    private string $inputEncoding = 'UTF-8';
+    private $inputEncoding = 'UTF-8';
 
     /**
      * Fallback encoding if guess strikes out.
+      * @var string
      */
-    private string $fallbackEncoding = self::DEFAULT_FALLBACK_ENCODING;
+    private $fallbackEncoding = self::DEFAULT_FALLBACK_ENCODING;
 
     /**
      * Delimiter.
+      * @var ?string
      */
-    private ?string $delimiter = null;
+    private $delimiter = null;
 
     /**
      * Enclosure.
+      * @var string
      */
-    private string $enclosure = '"';
+    private $enclosure = '"';
 
     /**
      * Sheet index to read.
+      * @var int
      */
-    private int $sheetIndex = 0;
+    private $sheetIndex = 0;
 
     /**
      * Load rows contiguously.
+      * @var bool
      */
-    private bool $contiguous = false;
+    private $contiguous = false;
 
     /**
      * The character that can escape the enclosure.
      * This will probably become unsupported in Php 9.
      * Not yet ready to mark deprecated in order to give users
      * a migration path.
+      * @var ?string
      */
-    private ?string $escapeCharacter = null;
+    private $escapeCharacter = null;
 
     /**
      * Callback for setting defaults in construction.
      *
      * @var ?callable
      */
-    private static $constructorCallback;
+    private $constructorCallback;
 
     /** Changed from true to false in release 4.0.0 */
     public const DEFAULT_TEST_AUTODETECT = false;
 
     /**
      * Attempt autodetect line endings (deprecated after PHP8.1)?
+      * @var bool
      */
-    private bool $testAutodetect = self::DEFAULT_TEST_AUTODETECT;
+    private $testAutodetect = self::DEFAULT_TEST_AUTODETECT;
 
-    protected bool $castFormattedNumberToNumeric = false;
+    /** @var bool */
+    protected $castFormattedNumberToNumeric = false;
 
-    protected bool $preserveNumericFormatting = false;
+    /** @var bool */
+    protected $preserveNumericFormatting = false;
 
-    private bool $preserveNullString = false;
+    /** @var bool */
+    private $preserveNullString = false;
 
-    private bool $sheetNameIsFileName = false;
+    /** @var bool */
+    private $sheetNameIsFileName = false;
 
-    private string $getTrue = 'true';
+    /** @var string */
+    private $getTrue = 'true';
 
-    private string $getFalse = 'false';
+    /** @var string */
+    private $getFalse = 'false';
 
-    private string $thousandsSeparator = ',';
+    /** @var string */
+    private $thousandsSeparator = ',';
 
-    private string $decimalSeparator = '.';
+    /** @var string */
+    private $decimalSeparator = '.';
 
     /**
      * Create a new CSV Reader instance.

@@ -6,24 +6,29 @@ use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
 
 class TextGrid
 {
-    private bool $isCli;
+    /** @var bool */
+    private $isCli;
 
     /** @var mixed[][] */
-    protected array $matrix;
+    protected $matrix;
 
     /** @var int[] */
-    protected array $rows;
+    protected $rows;
 
     /** @var string[] */
-    protected array $columns;
+    protected $columns;
 
-    private string $gridDisplay;
+    /** @var string */
+    private $gridDisplay;
 
-    private bool $rowDividers = false;
+    /** @var bool */
+    private $rowDividers = false;
 
-    private bool $rowHeaders = true;
+    /** @var bool */
+    private $rowHeaders = true;
 
-    private bool $columnHeaders = true;
+    /** @var bool */
+    private $columnHeaders = true;
 
     /** @param mixed[][] $matrix */
     public function __construct(array $matrix, bool $isCli = true, bool $rowDividers = false, bool $rowHeaders = true, bool $columnHeaders = true)

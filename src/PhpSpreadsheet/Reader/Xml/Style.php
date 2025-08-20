@@ -12,7 +12,7 @@ class Style
      *
      * @var mixed[]
      */
-    protected array $styles = [];
+    protected $styles = [];
 
     /**
      * @param string[] $namespaces

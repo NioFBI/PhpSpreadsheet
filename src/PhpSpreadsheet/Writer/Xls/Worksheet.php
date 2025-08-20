@@ -56,115 +56,134 @@ use PhpOffice\PhpSpreadsheet\Writer\Exception as WriterException;
 // */
 class Worksheet extends BIFFwriter
 {
-    private static int $always0 = 0;
+    /** @var int */
+    private static $always0 = 0;
 
-    private static int $always1 = 1;
+    /** @var int */
+    private static $always1 = 1;
 
     /**
      * Formula parser.
+      * @var Parser
      */
-    private Parser $parser;
+    private $parser;
 
     /**
      * Array containing format information for columns.
      *
      * @var array<array{int, int, float, int, int, int}>
      */
-    private array $columnInfo;
+    private $columnInfo;
 
     /**
      * The active pane for the worksheet.
+      * @var int
      */
-    private int $activePane;
+    private $activePane;
 
     /**
      * Whether to use outline.
+      * @var bool
      */
-    private bool $outlineOn;
+    private $outlineOn;
 
     /**
      * Auto outline styles.
+      * @var bool
      */
-    private bool $outlineStyle;
+    private $outlineStyle;
 
     /**
      * Whether to have outline summary below.
      * Not currently used.
+      * @var bool
      */
-    private bool $outlineBelow; //* @phpstan-ignore-line
+    private $outlineBelow; //* @phpstan-ignore-line
 
     /**
      * Whether to have outline summary at the right.
      * Not currently used.
+      * @var bool
      */
-    private bool $outlineRight; //* @phpstan-ignore-line
+    private $outlineRight; //* @phpstan-ignore-line
 
     /**
      * Reference to the total number of strings in the workbook.
+      * @var int
      */
-    private int $stringTotal;
+    private $stringTotal;
 
     /**
      * Reference to the number of unique strings in the workbook.
+      * @var int
      */
-    private int $stringUnique;
+    private $stringUnique;
 
     /**
      * Reference to the array containing all the unique strings in the workbook.
      *
      * @var array<string, int>
      */
-    private array $stringTable;
+    private $stringTable;
 
     /**
      * Color cache.
      *
      * @var mixed[]
      */
-    private array $colors;
+    private $colors;
 
     /**
      * Index of first used row (at least 0).
+      * @var int
      */
-    private int $firstRowIndex;
+    private $firstRowIndex;
 
     /**
      * Index of last used row. (no used rows means -1).
+      * @var int
      */
-    private int $lastRowIndex;
+    private $lastRowIndex;
 
     /**
      * Index of first used column (at least 0).
+      * @var int
      */
-    private int $firstColumnIndex;
+    private $firstColumnIndex;
 
     /**
      * Index of last used column (no used columns means -1).
+      * @var int
      */
-    private int $lastColumnIndex;
+    private $lastColumnIndex;
 
     /**
      * Sheet object.
+      * @var \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet
      */
-    public \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $phpSheet;
+    public $phpSheet;
 
     /**
      * Escher object corresponding to MSODRAWING.
+      * @var ?\PhpOffice\PhpSpreadsheet\Shared\Escher
      */
-    private ?\PhpOffice\PhpSpreadsheet\Shared\Escher $escher = null;
+    private $escher = null;
 
     /**
      * Array of font hashes associated to FONT records index.
      *
      * @var array<int|string>
      */
-    public array $fontHashIndex;
+    public $fontHashIndex;
 
-    private bool $preCalculateFormulas;
+    /** @var bool */
+    private $preCalculateFormulas;
 
-    private int $printHeaders;
+    /** @var int */
+    private $printHeaders;
 
-    private ?Workbook $writerWorkbook;
+    /** @var ?Workbook */
+    private $writerWorkbook;
 
     /**
      * Constructor.
@@ -807,7 +826,8 @@ class Worksheet extends BIFFwriter
     const WRITE_FORMULA_RANGE = -2;
     const WRITE_FORMULA_EXCEPTION = -3;
 
-    private static bool $allowThrow = false;
+    /** @var bool */
+    private static $allowThrow = false;
 
     public static function setAllowThrow(bool $allowThrow): void
     {

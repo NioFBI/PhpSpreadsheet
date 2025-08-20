@@ -51,8 +51,9 @@ class Workbook extends BIFFwriter
 {
     /**
      * Formula parser.
+      * @var Parser
      */
-    private Parser $parser;
+    private $parser;
 
     /*
      * The BIFF file size for the workbook. Not currently used.
@@ -66,100 +67,106 @@ class Workbook extends BIFFwriter
      *
      * @var Xf[]
      */
-    private array $xfWriters = [];
+    private $xfWriters = [];
 
     /**
      * Array containing the colour palette.
      *
      * @var array<int, array{int, int, int, int}>
      */
-    private array $palette;
+    private $palette;
 
     /**
      * The codepage indicates the text encoding used for strings.
+      * @var int
      */
-    private int $codepage;
+    private $codepage;
 
     /**
      * The country code used for localization.
+      * @var int
      */
-    private int $countryCode;
+    private $countryCode;
 
     /**
      * Workbook.
+      * @var Spreadsheet
      */
-    private Spreadsheet $spreadsheet;
+    private $spreadsheet;
 
     /**
      * Fonts writers.
      *
      * @var Font[]
      */
-    private array $fontWriters = [];
+    private $fontWriters = [];
 
     /**
      * Added fonts. Maps from font's hash => index in workbook.
      *
      * @var int[]
      */
-    private array $addedFonts = [];
+    private $addedFonts = [];
 
     /**
      * Shared number formats.
      *
      * @var NumberFormat[]
      */
-    private array $numberFormats = [];
+    private $numberFormats = [];
 
     /**
      * Added number formats. Maps from numberFormat's hash => index in workbook.
      *
      * @var int[]
      */
-    private array $addedNumberFormats = [];
+    private $addedNumberFormats = [];
 
     /**
      * Sizes of the binary worksheet streams.
      *
      * @var int[]
      */
-    private array $worksheetSizes = [];
+    private $worksheetSizes = [];
 
     /**
      * Offsets of the binary worksheet streams relative to the start of the global workbook stream.
      *
      * @var int[]
      */
-    private array $worksheetOffsets = [];
+    private $worksheetOffsets = [];
 
     /**
      * Total number of shared strings in workbook.
+      * @var int
      */
-    private int $stringTotal;
+    private $stringTotal;
 
     /**
      * Number of unique shared strings in workbook.
+      * @var int
      */
-    private int $stringUnique;
+    private $stringUnique;
 
     /**
      * Array of unique shared strings in workbook.
      *
      * @var array<string, int>
      */
-    private array $stringTable;
+    private $stringTable;
 
     /**
      * Color cache.
      *
      * @var int[]
      */
-    private array $colors;
+    private $colors;
 
     /**
      * Escher object corresponding to MSODRAWINGGROUP.
+      * @var ?\PhpOffice\PhpSpreadsheet\Shared\Escher
      */
-    private ?\PhpOffice\PhpSpreadsheet\Shared\Escher $escher = null;
+    private $escher = null;
 
     /**
      * Class constructor.

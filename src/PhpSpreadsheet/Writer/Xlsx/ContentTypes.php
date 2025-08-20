@@ -232,7 +232,8 @@ class ContentTypes extends WriterPart
         return $objWriter->getData();
     }
 
-    private static int $three = 3; // phpstan silliness
+    /** @var int */
+    private static $three = 3; // phpstan silliness
 
     /**
      * Get image mime type.

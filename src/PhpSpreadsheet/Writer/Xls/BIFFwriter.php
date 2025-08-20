@@ -41,25 +41,29 @@ class BIFFwriter
 {
     /**
      * The byte order of this architecture. 0 => little endian, 1 => big endian.
+      * @var ?int
      */
-    private static ?int $byteOrder = null;
+    private static $byteOrder = null;
 
     /**
      * The string containing the data of the BIFF stream.
+      * @var ?string
      */
-    public ?string $_data;
+    public $_data;
 
     /**
      * The size of the data in bytes. Should be the same as strlen($this->_data).
+      * @var int
      */
-    public int $_datasize;
+    public $_datasize;
 
     /**
      * The maximum length for a BIFF record (excluding record header and length field). See addContinue().
      *
      * @see addContinue()
+      * @var int
      */
-    private int $limit = 8224;
+    private $limit = 8224;
 
     /**
      * Constructor.

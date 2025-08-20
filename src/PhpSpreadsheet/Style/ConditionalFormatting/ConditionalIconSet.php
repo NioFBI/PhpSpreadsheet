@@ -5,24 +5,27 @@ namespace PhpOffice\PhpSpreadsheet\Style\ConditionalFormatting;
 class ConditionalIconSet
 {
     /** The icon set to display. */
-    private ?IconSetValues $iconSetType = null;
+    /** @var ?IconSetValues */
+    private $iconSetType = null;
 
     /**  If true, reverses the default order of the icons in this icon set. */
-    private ?bool $reverse = null;
+    private $reverse = null;
 
+     * @var ?bool
     /** Indicates whether to show the values of the cells on which this icon set is applied. */
-    private ?bool $showValue = null;
+    private $showValue = null;
 
     /**
      * If true, indicates that the icon set is a custom icon set.
      * If this value is "true", there MUST be the same number of cfIcon elements
      * as cfvo elements.
      * If this value is "false", there MUST be 0 cfIcon elements.
+      * @var ?bool
      */
-    private ?bool $custom = null;
+    private $custom = null;
 
     /** @var ConditionalFormatValueObject[] */
-    private array $cfvos = [];
+    private $cfvos = [];
 
     public function getIconSetType(): ?IconSetValues
     {

@@ -14,58 +14,69 @@ class Borders extends Supervisor
 
     /**
      * Left.
+      * @var Border
      */
-    protected Border $left;
+    protected $left;
 
     /**
      * Right.
+      * @var Border
      */
-    protected Border $right;
+    protected $right;
 
     /**
      * Top.
+      * @var Border
      */
-    protected Border $top;
+    protected $top;
 
     /**
      * Bottom.
+      * @var Border
      */
-    protected Border $bottom;
+    protected $bottom;
 
     /**
      * Diagonal.
+      * @var Border
      */
-    protected Border $diagonal;
+    protected $diagonal;
 
     /**
      * DiagonalDirection.
+      * @var int
      */
-    protected int $diagonalDirection;
+    protected $diagonalDirection;
 
     /**
      * All borders pseudo-border. Only applies to supervisor.
+      * @var Border
      */
-    protected Border $allBorders;
+    protected $allBorders;
 
     /**
      * Outline pseudo-border. Only applies to supervisor.
+      * @var Border
      */
-    protected Border $outline;
+    protected $outline;
 
     /**
      * Inside pseudo-border. Only applies to supervisor.
+      * @var Border
      */
-    protected Border $inside;
+    protected $inside;
 
     /**
      * Vertical pseudo-border. Only applies to supervisor.
+      * @var Border
      */
-    protected Border $vertical;
+    protected $vertical;
 
     /**
      * Horizontal pseudo-border. Only applies to supervisor.
+      * @var Border
      */
-    protected Border $horizontal;
+    protected $horizontal;
 
     /**
      * Create a new Borders.

@@ -29,7 +29,7 @@ class ConvertUOM
      *
      * @var array<string, array{Group: string, UnitName: string, AllowPrefix: bool}>
      */
-    private static array $conversionUnits = [
+    private static $conversionUnits = [
         // Weight and Mass
         'g' => ['Group' => self::CATEGORY_WEIGHT_AND_MASS, 'UnitName' => 'Gram', 'AllowPrefix' => true],
         'sg' => ['Group' => self::CATEGORY_WEIGHT_AND_MASS, 'UnitName' => 'Slug', 'AllowPrefix' => false],
@@ -203,7 +203,7 @@ class ConvertUOM
      *
      * @var array<string, array{multiplier: float, name: string}>
      */
-    private static array $conversionMultipliers = [
+    private static $conversionMultipliers = [
         'Y' => ['multiplier' => 1E24, 'name' => 'yotta'],
         'Z' => ['multiplier' => 1E21, 'name' => 'zetta'],
         'E' => ['multiplier' => 1E18, 'name' => 'exa'],
@@ -232,7 +232,7 @@ class ConvertUOM
      *
      * @var array<string, array{multiplier: float|int, name: string}>
      */
-    private static array $binaryConversionMultipliers = [
+    private static $binaryConversionMultipliers = [
         'Yi' => ['multiplier' => 2 ** 80, 'name' => 'yobi'],
         'Zi' => ['multiplier' => 2 ** 70, 'name' => 'zebi'],
         'Ei' => ['multiplier' => 2 ** 60, 'name' => 'exbi'],
@@ -248,7 +248,7 @@ class ConvertUOM
      *
      * @var array<string, array<string, float>>
      */
-    private static array $unitConversions = [
+    private static $unitConversions = [
         // Conversion uses gram (g) as an intermediate unit
         self::CATEGORY_WEIGHT_AND_MASS => [
             'g' => 1.0,

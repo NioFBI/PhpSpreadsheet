@@ -9,19 +9,26 @@ use PhpOffice\PhpSpreadsheet\Style\Style;
 
 abstract class WizardAbstract
 {
-    protected ?Style $style = null;
+    /** @var ?Style */
+    protected $style = null;
 
-    protected string $expression;
+    /** @var string */
+    protected $expression;
 
-    protected string $cellRange;
+    /** @var string */
+    protected $cellRange;
 
-    protected string $referenceCell;
+    /** @var string */
+    protected $referenceCell;
 
-    protected int $referenceRow;
+    /** @var int */
+    protected $referenceRow;
 
-    protected bool $stopIfTrue = false;
+    /** @var bool */
+    protected $stopIfTrue = false;
 
-    protected int $referenceColumn;
+    /** @var int */
+    protected $referenceColumn;
 
     public function __construct(string $cellRange)
     {

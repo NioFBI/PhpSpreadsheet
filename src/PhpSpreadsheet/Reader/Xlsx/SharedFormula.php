@@ -4,9 +4,11 @@ namespace PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 
 class SharedFormula
 {
-    private string $master;
+    /** @var string */
+    private $master;
 
-    private string $formula;
+    /** @var string */
+    private $formula;
 
     public function __construct(string $master, string $formula)
     {

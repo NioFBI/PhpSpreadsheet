@@ -9,8 +9,9 @@ class Run extends TextElement implements ITextElement
 {
     /**
      * Font.
+      * @var ?Font
      */
-    private ?Font $font;
+    private $font;
 
     /**
      * Create a new Run instance.

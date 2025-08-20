@@ -9,15 +9,18 @@ class DgContainer
 {
     /**
      * Drawing index, 1-based.
+      * @var ?int
      */
-    private ?int $dgId = null;
+    private $dgId = null;
 
     /**
      * Last shape index in this drawing.
+      * @var ?int
      */
-    private ?int $lastSpId = null;
+    private $lastSpId = null;
 
-    private ?SpgrContainer $spgrContainer = null;
+    /** @var ?SpgrContainer */
+    private $spgrContainer = null;
 
     public function getDgId(): ?int
     {

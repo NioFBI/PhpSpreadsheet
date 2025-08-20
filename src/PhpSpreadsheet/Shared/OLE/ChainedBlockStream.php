@@ -12,27 +12,29 @@ class ChainedBlockStream
 
     /**
      * The OLE container of the file that is being read.
+      * @var ?OLE
      */
-    public ?OLE $ole = null;
+    public $ole = null;
 
     /**
      * Parameters specified by fopen().
      *
      * @var mixed[]
      */
-    public array $params = [];
+    public $params = [];
 
     /**
      * The binary data of the file.
+      * @var string
      */
-    public string $data;
+    public $data;
 
     /**
      * The file pointer.
      *
      * @var int byte offset
      */
-    public int $pos = 0;
+    public $pos = 0;
 
     /**
      * Implements support for fopen().

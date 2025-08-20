@@ -10,9 +10,11 @@ use SimpleXMLElement;
 
 class ColumnAndRowAttributes extends BaseParserClass
 {
-    private Worksheet $worksheet;
+    /** @var Worksheet */
+    private $worksheet;
 
-    private ?SimpleXMLElement $worksheetXml;
+    /** @var ?SimpleXMLElement */
+    private $worksheetXml;
 
     public function __construct(Worksheet $workSheet, ?SimpleXMLElement $worksheetXml = null)
     {

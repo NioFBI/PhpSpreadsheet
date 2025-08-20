@@ -29,24 +29,30 @@ class Legend
 
     /**
      * Legend position.
+      * @var string
      */
-    private string $position = self::POSITION_RIGHT;
+    private $position = self::POSITION_RIGHT;
 
     /**
      * Allow overlay of other elements?
+      * @var bool
      */
-    private bool $overlay = true;
+    private $overlay = true;
 
     /**
      * Legend Layout.
+      * @var ?Layout
      */
-    private ?Layout $layout;
+    private $layout;
 
-    private GridLines $borderLines;
+    /** @var GridLines */
+    private $borderLines;
 
-    private ChartColor $fillColor;
+    /** @var ChartColor */
+    private $fillColor;
 
-    private ?AxisText $legendText = null;
+    /** @var ?AxisText */
+    private $legendText = null;
 
     /**
      * Create a new Legend.

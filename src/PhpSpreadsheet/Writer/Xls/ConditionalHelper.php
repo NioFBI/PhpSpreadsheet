@@ -10,16 +10,21 @@ class ConditionalHelper
 {
     /**
      * Formula parser.
+      * @var Parser
      */
-    protected Parser $parser;
+    protected $parser;
 
-    protected mixed $condition;
+    /** @var mixed */
+    protected $condition;
 
-    protected string $cellRange;
+    /** @var string */
+    protected $cellRange;
 
-    protected ?string $tokens = null;
+    /** @var ?string */
+    protected $tokens = null;
 
-    protected int $size;
+    /** @var int */
+    protected $size;
 
     public function __construct(Parser $parser)
     {

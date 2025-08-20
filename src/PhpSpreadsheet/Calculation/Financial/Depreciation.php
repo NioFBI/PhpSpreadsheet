@@ -8,7 +8,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\Information\ExcelError;
 
 class Depreciation
 {
-    private static float $zeroPointZero = 0.0;
+    /** @var float */
+    private static $zeroPointZero = 0.0;
 
     /**
      * DB.

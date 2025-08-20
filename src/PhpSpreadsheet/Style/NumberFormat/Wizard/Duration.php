@@ -93,14 +93,15 @@ class Duration extends DateTimeWizard
     /**
      * @var string[]
      */
-    protected array $separators;
+    protected $separators;
 
     /**
      * @var string[]
      */
-    protected array $formatBlocks;
+    protected $formatBlocks;
 
-    protected bool $durationIsSet = false;
+    /** @var bool */
+    protected $durationIsSet = false;
 
     /**
      * @param null|string|string[] $separators

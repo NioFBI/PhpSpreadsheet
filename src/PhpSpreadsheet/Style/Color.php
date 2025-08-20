@@ -108,12 +108,15 @@ class Color extends Supervisor
 
     /**
      * ARGB - Alpha RGB.
+      * @var ?string
      */
-    protected ?string $argb = null;
+    protected $argb = null;
 
-    private bool $hasChanged = false;
+    /** @var bool */
+    private $hasChanged = false;
 
-    private int $theme = -1;
+    /** @var int */
+    private $theme = -1;
 
     /**
      * Create a new Color.

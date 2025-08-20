@@ -15,26 +15,34 @@ class CurrencyBase extends Number
 
     public const SYMBOL_WITHOUT_SPACING = false;
 
-    protected string $currencyCode = '$';
+    /** @var string */
+    protected $currencyCode = '$';
 
-    protected bool $currencySymbolPosition = self::LEADING_SYMBOL;
+    /** @var bool */
+    protected $currencySymbolPosition = self::LEADING_SYMBOL;
 
-    protected bool $currencySymbolSpacing = self::SYMBOL_WITHOUT_SPACING;
+    /** @var bool */
+    protected $currencySymbolSpacing = self::SYMBOL_WITHOUT_SPACING;
 
     protected const DEFAULT_STRIP_LEADING_RLM = false;
 
-    protected bool $stripLeadingRLM = self::DEFAULT_STRIP_LEADING_RLM;
+    /** @var bool */
+    protected $stripLeadingRLM = self::DEFAULT_STRIP_LEADING_RLM;
 
     public const DEFAULT_NEGATIVE = CurrencyNegative::minus;
 
-    protected CurrencyNegative $negative = CurrencyNegative::minus;
+    /** @var CurrencyNegative */
+    protected $negative = CurrencyNegative::minus;
 
-    protected ?bool $overrideSpacing = null;
+    /** @var ?bool */
+    protected $overrideSpacing = null;
 
-    protected ?CurrencyNegative $overrideNegative = null;
+    /** @var ?CurrencyNegative */
+    protected $overrideNegative = null;
 
     // Not sure why original code uses nbsp
-    private string $spaceOrNbsp = ' '; // or "\u{a0}"
+    /** @var string */
+    private $spaceOrNbsp = ' '; // or "\u{a0}"
 
     /**
      * @param string $currencyCode the currency symbol or code to display for this mask

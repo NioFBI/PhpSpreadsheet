@@ -10,13 +10,17 @@ use SimpleXMLElement;
 
 class SheetViews extends BaseParserClass
 {
-    private SimpleXMLElement $sheetViewXml;
+    /** @var SimpleXMLElement */
+    private $sheetViewXml;
 
-    private SimpleXMLElement $sheetViewAttributes;
+    /** @var SimpleXMLElement */
+    private $sheetViewAttributes;
 
-    private Worksheet $worksheet;
+    /** @var Worksheet */
+    private $worksheet;
 
-    private string $activePane = '';
+    /** @var string */
+    private $activePane = '';
 
     public function __construct(SimpleXMLElement $sheetViewXml, Worksheet $workSheet)
     {

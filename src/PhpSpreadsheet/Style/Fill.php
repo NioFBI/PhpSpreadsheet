@@ -27,31 +27,38 @@ class Fill extends Supervisor
     const FILL_PATTERN_LIGHTVERTICAL = 'lightVertical';
     const FILL_PATTERN_MEDIUMGRAY = 'mediumGray';
 
-    public ?int $startcolorIndex = null;
+    /** @var ?int */
+    public $startcolorIndex = null;
 
-    public ?int $endcolorIndex = null;
+    /** @var ?int */
+    public $endcolorIndex = null;
 
     /**
      * Fill type.
+      * @var ?string
      */
-    protected ?string $fillType = self::FILL_NONE;
+    protected $fillType = self::FILL_NONE;
 
     /**
      * Rotation.
+      * @var float
      */
-    protected float $rotation = 0.0;
+    protected $rotation = 0.0;
 
     /**
      * Start color.
+      * @var Color
      */
-    protected Color $startColor;
+    protected $startColor;
 
     /**
      * End color.
+      * @var Color
      */
-    protected Color $endColor;
+    protected $endColor;
 
-    private bool $colorChanged = false;
+    /** @var bool */
+    private $colorChanged = false;
 
     /**
      * Create a new Fill.

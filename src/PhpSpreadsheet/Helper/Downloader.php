@@ -12,11 +12,14 @@ use PhpOffice\PhpSpreadsheet\Exception;
  */
 class Downloader
 {
-    protected string $filepath;
+    /** @var string */
+    protected $filepath;
 
-    protected string $filename;
+    /** @var string */
+    protected $filename;
 
-    protected string $filetype;
+    /** @var string */
+    protected $filetype;
 
     protected const CONTENT_TYPES = [
         'xlsx' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',

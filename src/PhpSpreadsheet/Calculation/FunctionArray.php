@@ -9,7 +9,7 @@ class FunctionArray extends CalculationBase
      *
      * @var array<string, array{category: string, functionCall: string|string[], argumentCount: string, passCellReference?: bool, passByReference?: bool[], custom?: bool}>
      */
-    protected static array $phpSpreadsheetFunctions = [
+    protected static $phpSpreadsheetFunctions = [
         'ABS' => [
             'category' => Category::CATEGORY_MATH_AND_TRIG,
             'functionCall' => [MathTrig\Absolute::class, 'evaluate'],

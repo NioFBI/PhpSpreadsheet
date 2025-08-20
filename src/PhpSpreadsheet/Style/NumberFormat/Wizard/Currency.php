@@ -4,7 +4,9 @@ namespace PhpOffice\PhpSpreadsheet\Style\NumberFormat\Wizard;
 
 class Currency extends CurrencyBase
 {
-    protected ?bool $overrideSpacing = false;
+    /** @var ?bool */
+    protected $overrideSpacing = false;
 
-    protected ?CurrencyNegative $overrideNegative = null;
+    /** @var ?CurrencyNegative */
+    protected $overrideNegative = null;
 }

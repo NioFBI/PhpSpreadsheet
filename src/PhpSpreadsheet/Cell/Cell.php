@@ -23,13 +23,15 @@ class Cell implements Stringable
 {
     /**
      * Value binder to use.
+      * @var ?IValueBinder
      */
-    private static ?IValueBinder $valueBinder = null;
+    private static $valueBinder = null;
 
     /**
      * Value of the cell.
+      * @var mixed
      */
-    private mixed $value;
+    private $value;
 
     /**
      *    Calculated value of the cell (used for caching)
@@ -45,27 +47,31 @@ class Cell implements Stringable
 
     /**
      * Type of the cell data.
+      * @var string
      */
-    private string $dataType;
+    private $dataType;
 
     /**
      * The collection of cells that this cell belongs to (i.e. The Cell Collection for the parent Worksheet).
+      * @var ?Cells
      */
-    private ?Cells $parent;
+    private $parent;
 
     /**
      * Index to the cellXf reference for the styling of this cell.
+      * @var int
      */
-    private int $xfIndex = 0;
+    private $xfIndex = 0;
 
     /**
      * Attributes of the formula.
      *
      * @var null|array<string, string>
      */
-    private ?array $formulaAttributes = null;
+    private $formulaAttributes = null;
 
-    private IgnoredErrors $ignoredErrors;
+    /** @var IgnoredErrors */
+    private $ignoredErrors;
 
     /**
      * Update the cell into the cell collection.
@@ -345,7 +351,8 @@ class Cell implements Stringable
     public const CALCULATE_DATE_TIME_FLOAT = 1;
     public const CALCULATE_TIME_FLOAT = 2;
 
-    private static int $calculateDateTimeType = self::CALCULATE_DATE_TIME_ASIS;
+    /** @var int */
+    private static $calculateDateTimeType = self::CALCULATE_DATE_TIME_ASIS;
 
     public static function getCalculateDateTimeType(): int
     {

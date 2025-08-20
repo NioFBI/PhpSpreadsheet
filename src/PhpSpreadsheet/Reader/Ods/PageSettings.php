@@ -9,31 +9,35 @@ use stdClass;
 
 class PageSettings
 {
-    private string $officeNs = '';
+    /** @var string */
+    private $officeNs = '';
 
-    private string $stylesNs = '';
+    /** @var string */
+    private $stylesNs = '';
 
-    private string $stylesFo = '';
+    /** @var string */
+    private $stylesFo = '';
 
-    private string $tableNs = '';
+    /** @var string */
+    private $tableNs = '';
 
     /**
      * @var string[]
      */
-    private array $tableStylesCrossReference = [];
+    private $tableStylesCrossReference = [];
 
     /** @var mixed[] */
-    private array $pageLayoutStyles = [];
+    private $pageLayoutStyles = [];
 
     /**
      * @var string[]
      */
-    private array $masterStylesCrossReference = [];
+    private $masterStylesCrossReference = [];
 
     /**
      * @var string[]
      */
-    private array $masterPrintStylesCrossReference = [];
+    private $masterPrintStylesCrossReference = [];
 
     public function __construct(DOMDocument $styleDom)
     {

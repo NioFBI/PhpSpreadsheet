@@ -51,17 +51,21 @@ class Xlsx extends BaseReader
 
     /**
      * ReferenceHelper instance.
+      * @var ReferenceHelper
      */
-    private ReferenceHelper $referenceHelper;
+    private $referenceHelper;
 
-    private ZipArchive $zip;
+    /** @var ZipArchive */
+    private $zip;
 
-    private Styles $styleReader;
+    /** @var Styles */
+    private $styleReader;
 
     /** @var SharedFormula[] */
-    private array $sharedFormulae = [];
+    private $sharedFormulae = [];
 
-    private bool $parseHuge = false;
+    /** @var bool */
+    private $parseHuge = false;
 
     /**
      * Allow use of LIBXML_PARSEHUGE.

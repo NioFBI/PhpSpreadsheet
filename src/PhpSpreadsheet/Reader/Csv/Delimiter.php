@@ -9,16 +9,20 @@ class Delimiter
     /** @var resource */
     protected $fileHandle;
 
-    protected string $escapeCharacter;
+    /** @var string */
+    protected $escapeCharacter;
 
-    protected string $enclosure;
+    /** @var string */
+    protected $enclosure;
 
     /** @var array<string, int[]> */
-    protected array $counts = [];
+    protected $counts = [];
 
-    protected int $numberLines = 0;
+    /** @var int */
+    protected $numberLines = 0;
 
-    protected ?string $delimiter = null;
+    /** @var ?string */
+    protected $delimiter = null;
 
     /**
      * @param resource $fileHandle

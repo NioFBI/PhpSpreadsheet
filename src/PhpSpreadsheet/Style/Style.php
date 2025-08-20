@@ -14,43 +14,51 @@ class Style extends Supervisor
 {
     /**
      * Font.
+      * @var Font
      */
-    protected Font $font;
+    protected $font;
 
     /**
      * Fill.
+      * @var Fill
      */
-    protected Fill $fill;
+    protected $fill;
 
     /**
      * Borders.
+      * @var Borders
      */
-    protected Borders $borders;
+    protected $borders;
 
     /**
      * Alignment.
+      * @var Alignment
      */
-    protected Alignment $alignment;
+    protected $alignment;
 
     /**
      * Number Format.
+      * @var NumberFormat
      */
-    protected NumberFormat $numberFormat;
+    protected $numberFormat;
 
     /**
      * Protection.
+      * @var Protection
      */
-    protected Protection $protection;
+    protected $protection;
 
     /**
      * Index of style in collection. Only used for real style.
+      * @var int
      */
-    protected int $index;
+    protected $index;
 
     /**
      * Use Quote Prefix when displaying in cell editor. Only used for real style.
+      * @var bool
      */
-    protected bool $quotePrefix = false;
+    protected $quotePrefix = false;
 
     /**
      * Internal cache for styles
@@ -69,7 +77,7 @@ class Style extends Supervisor
      *
      * @var null|array<string, mixed[]>
      */
-    private static ?array $cachedStyles = null;
+    private static $cachedStyles = null;
 
     /**
      * Create a new Style.

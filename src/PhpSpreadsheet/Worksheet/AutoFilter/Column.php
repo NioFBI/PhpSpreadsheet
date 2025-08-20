@@ -21,7 +21,7 @@ class Column
      *
      * @var string[]
      */
-    private static array $filterTypes = [
+    private static $filterTypes = [
         //    Currently we're not handling
         //        colorFilter
         //        extLst
@@ -41,44 +41,48 @@ class Column
      *
      * @var string[]
      */
-    private static array $ruleJoins = [
+    private static $ruleJoins = [
         self::AUTOFILTER_COLUMN_JOIN_AND,
         self::AUTOFILTER_COLUMN_JOIN_OR,
     ];
 
     /**
      * Autofilter.
+      * @var ?AutoFilter
      */
-    private ?AutoFilter $parent;
+    private $parent;
 
     /**
      * Autofilter Column Index.
+      * @var string
      */
-    private string $columnIndex;
+    private $columnIndex;
 
     /**
      * Autofilter Column Filter Type.
+      * @var string
      */
-    private string $filterType = self::AUTOFILTER_FILTERTYPE_FILTER;
+    private $filterType = self::AUTOFILTER_FILTERTYPE_FILTER;
 
     /**
      * Autofilter Multiple Rules And/Or.
+      * @var string
      */
-    private string $join = self::AUTOFILTER_COLUMN_JOIN_OR;
+    private $join = self::AUTOFILTER_COLUMN_JOIN_OR;
 
     /**
      * Autofilter Column Rules.
      *
      * @var Column\Rule[]
      */
-    private array $ruleset = [];
+    private $ruleset = [];
 
     /**
      * Autofilter Column Dynamic Attributes.
      *
      * @var (float|int|string)[]
      */
-    private array $attributes = [];
+    private $attributes = [];
 
     /**
      * Create a new Column.

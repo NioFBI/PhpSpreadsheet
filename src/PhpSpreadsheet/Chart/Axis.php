@@ -26,37 +26,42 @@ class Axis extends Properties
 
     /**
      * Chart Major Gridlines as.
+      * @var ?GridLines
      */
-    private ?GridLines $majorGridlines = null;
+    private $majorGridlines = null;
 
     /**
      * Chart Minor Gridlines as.
+      * @var ?GridLines
      */
-    private ?GridLines $minorGridlines = null;
+    private $minorGridlines = null;
 
     /**
      * Axis Number.
      *
      * @var array{format: string, source_linked: int, numeric: ?bool}
      */
-    private array $axisNumber = [
+    private $axisNumber = [
         'format' => self::FORMAT_CODE_GENERAL,
         'source_linked' => 1,
         'numeric' => null,
     ];
 
-    private string $axisType = '';
+    /** @var string */
+    private $axisType = '';
 
-    private ?AxisText $axisText = null;
+    /** @var ?AxisText */
+    private $axisText = null;
 
-    private ?Title $dispUnitsTitle = null;
+    /** @var ?Title */
+    private $dispUnitsTitle = null;
 
     /**
      * Axis Options.
      *
      * @var array<string, null|string>
      */
-    private array $axisOptions = [
+    private $axisOptions = [
         'minimum' => null,
         'maximum' => null,
         'major_unit' => null,
@@ -99,8 +104,9 @@ class Axis extends Properties
 
     /**
      * Fill Properties.
+      * @var ChartColor
      */
-    private ChartColor $fillColor;
+    private $fillColor;
 
     private const NUMERIC_FORMAT = [
         Properties::FORMAT_CODE_NUMBER,
@@ -108,7 +114,8 @@ class Axis extends Properties
         Properties::FORMAT_CODE_DATE_ISO8601,
     ];
 
-    private bool $noFill = false;
+    /** @var bool */
+    private $noFill = false;
 
     /**
      * Get Series Data Type.
@@ -255,7 +262,8 @@ class Axis extends Properties
         return $this->fillColor;
     }
 
-    private string $crossBetween = ''; // 'between' or 'midCat' might be better
+    /** @var string */
+    private $crossBetween = ''; // 'between' or 'midCat' might be better
 
     public function setCrossBetween(string $crossBetween): self
     {

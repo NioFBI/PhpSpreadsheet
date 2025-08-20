@@ -14,9 +14,11 @@ use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet as ActualWorksheet;
 
 class DefinedNames
 {
-    private XMLWriter $objWriter;
+    /** @var XMLWriter */
+    private $objWriter;
 
-    private Spreadsheet $spreadsheet;
+    /** @var Spreadsheet */
+    private $spreadsheet;
 
     public function __construct(XMLWriter $objWriter, Spreadsheet $spreadsheet)
     {

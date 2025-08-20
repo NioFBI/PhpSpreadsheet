@@ -64,173 +64,186 @@ class Xls extends XlsBase
 {
     /**
      * Summary Information stream data.
+      * @var ?string
      */
-    protected ?string $summaryInformation = null;
+    protected $summaryInformation = null;
 
     /**
      * Extended Summary Information stream data.
+      * @var ?string
      */
-    protected ?string $documentSummaryInformation = null;
+    protected $documentSummaryInformation = null;
 
     /**
      * Workbook stream data. (Includes workbook globals substream as well as sheet substreams).
+      * @var string
      */
-    protected string $data;
+    protected $data;
 
     /**
      * Size in bytes of $this->data.
+      * @var int
      */
-    protected int $dataSize;
+    protected $dataSize;
 
     /**
      * Current position in stream.
+      * @var int
      */
-    protected int $pos;
+    protected $pos;
 
     /**
      * Workbook to be returned by the reader.
+      * @var Spreadsheet
      */
-    protected Spreadsheet $spreadsheet;
+    protected $spreadsheet;
 
     /**
      * Worksheet that is currently being built by the reader.
+      * @var Worksheet
      */
-    protected Worksheet $phpSheet;
+    protected $phpSheet;
 
     /**
      * BIFF version.
+      * @var int
      */
-    protected int $version = 0;
+    protected $version = 0;
 
     /**
      * Shared formats.
      *
      * @var mixed[]
      */
-    protected array $formats;
+    protected $formats;
 
     /**
      * Shared fonts.
      *
      * @var Font[]
      */
-    protected array $objFonts;
+    protected $objFonts;
 
     /**
      * Color palette.
      *
      * @var string[][]
      */
-    protected array $palette;
+    protected $palette;
 
     /**
      * Worksheets.
      *
      * @var array<array{name: string, offset: int, sheetState: string, sheetType: int|string}>
      */
-    protected array $sheets;
+    protected $sheets;
 
     /**
      * External books.
      *
      * @var mixed[][]
      */
-    protected array $externalBooks;
+    protected $externalBooks;
 
     /**
      * REF structures. Only applies to BIFF8.
      *
      * @var mixed[][]
      */
-    protected array $ref;
+    protected $ref;
 
     /**
      * External names.
      *
      * @var array<array<string, mixed>|string>
      */
-    protected array $externalNames;
+    protected $externalNames;
 
     /**
      * Defined names.
      *
      * @var array{isBuiltInName: int, name: string, formula: string, scope: int}
      */
-    protected array $definedname;
+    protected $definedname;
 
     /**
      * Shared strings. Only applies to BIFF8.
      *
      * @var array<array{value: string, fmtRuns: mixed[]}>
      */
-    protected array $sst;
+    protected $sst;
 
     /**
      * Panes are frozen? (in sheet currently being read). See WINDOW2 record.
+      * @var bool
      */
-    protected bool $frozen;
+    protected $frozen;
 
     /**
      * Fit printout to number of pages? (in sheet currently being read). See SHEETPR record.
+      * @var bool
      */
-    protected bool $isFitToPages;
+    protected $isFitToPages;
 
     /**
      * Objects. One OBJ record contributes with one entry.
      *
      * @var mixed[]
      */
-    protected array $objs;
+    protected $objs;
 
     /**
      * Text Objects. One TXO record corresponds with one entry.
      *
      * @var array<array{text: string, format: string, alignment: int, rotation: int}>
      */
-    protected array $textObjects;
+    protected $textObjects;
 
     /**
      * Cell Annotations (BIFF8).
      *
      * @var mixed[]
      */
-    protected array $cellNotes;
+    protected $cellNotes;
 
     /**
      * The combined MSODRAWINGGROUP data.
+      * @var string
      */
-    protected string $drawingGroupData;
+    protected $drawingGroupData;
 
     /**
      * The combined MSODRAWING data (per sheet).
+      * @var string
      */
-    protected string $drawingData;
+    protected $drawingData;
 
     /**
      * Keep track of XF index.
+      * @var int
      */
-    protected int $xfIndex;
+    protected $xfIndex;
 
     /**
      * Mapping of XF index (that is a cell XF) to final index in cellXf collection.
      *
      * @var int[]
      */
-    protected array $mapCellXfIndex;
+    protected $mapCellXfIndex;
 
     /**
      * Mapping of XF index (that is a style XF) to final index in cellStyleXf collection.
      *
      * @var int[]
      */
-    protected array $mapCellStyleXfIndex;
+    protected $mapCellStyleXfIndex;
 
     /**
      * The shared formulas in a sheet. One SHAREDFMLA record contributes with one value.
      *
      * @var mixed[]
      */
-    protected array $sharedFormulas;
+    protected $sharedFormulas;
 
     /**
      * The shared formula parts in a sheet. One FORMULA record contributes with one value if it
@@ -238,41 +251,50 @@ class Xls extends XlsBase
      *
      * @var mixed[]
      */
-    protected array $sharedFormulaParts;
+    protected $sharedFormulaParts;
 
     /**
      * The type of encryption in use.
+      * @var int
      */
-    protected int $encryption = 0;
+    protected $encryption = 0;
 
     /**
      * The position in the stream after which contents are encrypted.
+      * @var int
      */
-    protected int $encryptionStartPos = 0;
+    protected $encryptionStartPos = 0;
 
-    protected string $encryptionPassword = 'VelvetSweatshop';
+    /** @var string */
+    protected $encryptionPassword = 'VelvetSweatshop';
 
     /**
      * The current RC4 decryption object.
+      * @var ?Xls\RC4
      */
-    protected ?Xls\RC4 $rc4Key = null;
+    protected $rc4Key = null;
 
     /**
      * The position in the stream that the RC4 decryption object was left at.
+      * @var int
      */
-    protected int $rc4Pos = 0;
+    protected $rc4Pos = 0;
 
     /**
      * The current MD5 context state.
      * It is set via call-by-reference to verifyPassword.
+      * @var string
      */
-    private string $md5Ctxt = '';
+    private $md5Ctxt = '';
 
-    protected int $textObjRef;
+    /** @var int */
+    protected $textObjRef;
 
-    protected string $baseCell;
+    /** @var string */
+    protected $baseCell;
 
-    protected bool $activeSheetSet = false;
+    /** @var bool */
+    protected $activeSheetSet = false;
 
     /**
      * Reads names of the worksheets from a file, without parsing the whole file to a PhpSpreadsheet object.
